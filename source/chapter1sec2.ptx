@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="chp1sec2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The order of the integers</title>
+
+  <p>In addition to the algebraic structure of the integers, they also possess an ordering.  This ordering is compatible with the algebraic operations and gives us a way to compare integers.</p>
+
+  <definition xml:id="def-definition-order">
+  <title>Order</title>
+  <statement>
+      <p>
+          A set <m>X</m> has a <term>total order</term> if there is a binary relationship <m>\le</m> satisfying: 
+          <dl width="narrow">
+            <li><title>(O1)</title>
+              <p>
+                (<term>Reflexivity</term>.) If <m>a\in X</m>, then <m>a\le a </m>.
+              </p>
+            </li>
+            <li><title>(O2)</title>
+              <p>
+                (<term>Transitivity</term>.) If <m>a,b,c \in X</m> satisfy <m>a\le b</m> and <m>b\le c</m>, then <m>a \le c</m>.
+              </p>
+            </li>
+            <li><title>(O3)</title>
+              <p>
+                (<term>Antisymmetry</term>.) If <m>a,b \in X</m> satisfy <m>a\le b</m> and <m>b\le a</m>, then <m>a=b</m>.
+              </p>
+            </li>
+            <li><title>(O4)</title>
+              <p>
+                (<term>Totality</term>.) If <m>a,b \in X</m>, then either <m>a\le b</m> or <m>b\le a</m>.
+              </p>
+            </li>
+          </dl>
+        If <m>a,b\in X</m>, where <m>a\le b</m> and <m>a \ne b</m>, then we write <m>a &lt; b</m>.  The expressions <m>a \le b</m> and <m>b \ge a</m> are equivalent.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Observe the symbols <m>\le</m>, <m>\ge</m>, <m>&lt;</m>, and <m>&gt;</m> will all be used in the usual ways.
+  </p>
+
+  <p>
+    A ring <m>R</m> is an <term>ordered ring</term> if <m>R</m> has a total order <m>\le </m> that is compatible with its operations as made precise in the following definition.  
+  </p>
+
+  <definition xml:id="definition-ordered-ring">
+    <title>Ordered Ring</title>
+    <statement>
+        <p>
+            A ring <m>R</m> is an <term>ordered ring</term> if <m>R</m> has a total order <m>\le </m> satisfying: 
+            <dl width="narrow">
+               <li><title>(OR1)</title>
+                <p>
+                  (<term>Addition preserves order</term>.) If <m>a,b,c \in R</m> and <m>a\le b</m>, then <m>a +c\le b+c</m>
+                </p>
+              </li>
+              <li><title>(OR2)</title>
+                <p>
+                  (<term>Positive scaling preserves order</term>.) If <m>a,b \in R</m> satisfy <m>0 \le a</m> and <m>0 \le b</m>, then <m>0\le ab</m>
+                </p>
+              </li>
+            </dl>
+        </p>
+    </statement>
+  </definition>
+
+  <p>
+    We call elements of an ordered ring <term> positive </term> if it is greater than zero and <term> negative </term> if it is less than zero.
+  </p>
+
+<p>We will establish some basic properties of ordered rings in the following propositions.</p>
+
+<proposition xml:id="proposition-inverse_flips_sign">
+  <title>Additive inverses of positive elements are negative</title>
+  <statement>
+    <p>
+      If <m>R</m> is an ordered ring and <m> a \in R </m> is positive (resp. negative), then <m>-a</m> is negative (resp. positive).  
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Try a proof by cases. For each case, do a direct proof.  In the first case, suppose <m> 0 &lt; a </m>.  Show <m> -a &lt; 0 </m> (why???).  Now do the other case.  You may find  <xref ref="definition-commutative_ring"/>  and <xref ref="definition-ordered-ring"/> useful.
+    </p>
+  </proof>
+</proposition>
+
+
+<proposition xml:id="proposition-positive_unit_preserves_inequality">
+  <title>Multiplication by a positive unit preserves inequality</title>
+  <statement>
+    <p>
+      If <m>R</m> is a ordered ring and <m>a,b,c\in R</m> are positive such that <m>a</m> is a unit and <m>0&lt;b&lt;c</m>, then <m>0&lt;ab&lt;ac</m>.  
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Try a proof by contradiction.  We know it must be the case that <m>0 \le ab \le ac</m> (why???) but what could go wrong and how to we show those things cannot happen? Suppose one of the undesirable things happened - how does the invertibility of <m>a</m> lead to a contradiction?  You may find  <xref ref="definition-commutative_ring"/>, <xref ref="definition-unit"/>, and <xref ref="definition-ordered-ring"/> useful.
+    </p>
+  </proof>
+</proposition>
+
+
+<proposition xml:id="proposition-positive_unit_preserves_inequality7">
+  <title>A unit and its multiplicative inverse have the same sign</title>
+  <statement>
+    <p>
+      If <m>R</m> is a ordered ring and <m>a \in R</m> is a unit, then <m>a</m> and <m>a^{-1}</m> have the same sign.  
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Try a proof by contradiction.  Then, without loss of generality, suppose <m>a</m> is positive and <m>a^{-1}</m> is negative.  So <m>a^{-1}&lt; 0 &lt; a</m>.   Think about multipliying this inequality with a couple of known units.  Can you find a contradiction?  You may find  <xref ref="definition-commutative_ring"/>, <xref ref="definition-unit"/>,  <xref ref="definition-ordered-ring"/>, <xref ref="proposition-positive_unit_preserves_inequality"/> useful.
+    </p>
+  </proof>
+</proposition>
+
+<proposition xml:id="proposition-one_is_positive">
+  <title>1 is positive</title>
+  <statement>
+    <p>
+      If <m>R</m> is a ordered ring, then <m>1</m> is positive.  
+    </p>
+  </statement>
+  <proof>
+    <p>
+      Try a proof by contradiction.  If 1 is negative, then -1 is positive (why???).   So <m>0 &lt; -1</m>.  Multiply by -1.   What do you know about the sign of <m>(-1)^2</m> and why?  Can you find a contradiction?  You may find  <xref ref="definition-commutative_ring"/>, <xref ref="definition-unit"/>,  <xref ref="definition-ordered-ring"/>, <xref ref="proposition-inverse_flips_sign"/>, <xref ref="proposition-negative_one_times_anything_is_additive_inverse"/>, <xref ref="proposition-zero_times_anything_is_zero"/>, <xref ref="proposition-positive_unit_preserves_inequality"/>, <xref ref="proposition-negative_one_squared_is_one"/>,  useful.
+    </p>
+  </proof>
+</proposition>
+\
+
+</section>
