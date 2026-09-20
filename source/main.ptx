@@ -5,19 +5,16 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="Constructing_Number_Theory">
-    <title>Constructing Number Theory</title>
+    <title>Constructing Lie Groups</title>
     <subtitle>An Investigative Approach</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./chapter0.ptx" />
     <xi:include href="./chapter1.ptx" />
     <xi:include href="./chapter2.ptx" />
-    <xi:include href="./chapter3.ptx" />
-    <xi:include href="./chapter4.ptx" />
-    <xi:include href="./chapter5.ptx" />
+
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />

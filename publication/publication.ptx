@@ -45,6 +45,7 @@
   <!-- stored or created.  Directories are relative to the main -->
   <!-- source PreTeXt file                                      -->
   <source>
+  
     <!-- Paths to folders containing external assets and generated assets -->
     <!-- relative to your main source file.                               -->
     <directories external="../assets" generated="../generated-assets" />
@@ -75,7 +76,7 @@
       <!--<projects level="2" />-->
       <!--<equations level="2" />-->
       <!--<footnotes level="2" />-->
-      <divisions chapter-start="0"/>
+      <divisions chapter-start="1"/>
   </numbering>
 
   <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
@@ -143,12 +144,25 @@
         exercise-worksheet="no"
         exercise-readingquestion="no"
       />-->
+      <knowl 
+      example="no"
+    />
+    
 
     <!-- Specify the theme for the html by giving names to     -->
     <!-- override defaults.  Ex:<css theme="denver"/>          -->
     <!-- See also                                              -->
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-      <!--<css theme="denver"/>-->
+             <css theme="denver" 
+             palette="ice-fire" 
+             color-main="#1a5276" 
+             color-do="rgb(120, 40, 140)" 
+             color-fact="rgb(2, 37, 214)" 
+             color-meta="rgb(56, 214, 214)" />
+
+      <css>
+            <custom>custom.css</custom>
+        </css>
 
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
