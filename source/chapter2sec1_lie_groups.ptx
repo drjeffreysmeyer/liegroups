@@ -3,50 +3,25 @@
 <section xml:id="section_lie_groups" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Lie Groups</title>
 <p>
-    In this section we introduce Lie groups.  We start with understanding the matrix Lie groups, extract their properties and then construct and analyze the formal object.
+    In this section we introduce Lie groups.  We give their definition and many motivating examples from linear algebra and Riemannian geometry. 
 </p>
-
 <subsection>
-    <title>Matrix Lie Groups</title>
-    
-    <p>
-        We already know that <m>\GL_2(\R)</m> is a locally compact topological group, but we know more.  As a subset of <m>\R^{4}</m>, it is an open set.  Therefore, it is a smooth manifold.  
-        
-        If <m>A,B\in \GL_n(\R)</m> where <m>A = \begin{bmatrix} a \amp b\\c \amp d\end{bmatrix}</m> and <m>B = \begin{bmatrix} e \amp f\\g \amp h\end{bmatrix}</m>, then 
-        
-        <me> AB = \begin{bmatrix} ae + bg \amp af + bh\\ce + dg \amp cf + dh\end{bmatrix}.</me>
-        
-        and 
+<title>First Definitions</title>
 
-        <me> A^{-1} = \frac{1}{ad-bc}\begin{bmatrix} d \amp -b\\-c \amp a\end{bmatrix}.</me>
-        
-        Observe that the group multiplication is given by polynomial maps on the entries of the matrices, and these maps are smooth.  Inversion is given by the adjugate matrix divided by the determinant, which is a rational function on its domain of definition.  Therefore the group structure maps of <m>\GL_2(\R)</m> are smooth.  
-    </p>
-        
-    <p>
-        The tangent space at the identity is <m>T_I\GL_2(\R) = \R^{2\times 2}</m> and the Lie bracket is given by the commutator of matrices, <me>[A,B] = AB - BA.</me>
-    </p>
-
-
-
-    <p>
-        More generally, but for the same reasons, <m>\GL_n(\R)</m> an open, and hence smooth subset of <m>\R^{n^2}</m>.       
-        The group multiplication is given by polynomial maps on the entries of the matrices, and these maps are smooth.  Inversion is given by the adjugate matrix divided by the determinant, which is a rational function on its domain of definition.  Therefore the group structure maps of <m>\GL_n(\R)</m> are smooth.  
-    </p>
-
-
-
-</subsection>
-
-
-<subsection>
-    <title>Lie Groups 101</title>
-
-    <definition>
+    <definition xml:id="definition-lie_group">
         <title>Lie Groups</title>
         <statement>
             <p>
-                A <term> Lie group</term> is a smooth manifold that is also a group, such that the group structure maps <m> G \times G \to G </m> and <m> G \to G </m> are smooth.
+                A <term> Lie group</term> is a smooth manifold that is also a group, such that the group structure maps <m> \mu:G \times G \to G </m> and <m>i:  G \to G </m> are smooth.
+            </p>
+        </statement>
+    </definition>
+
+    <definition xml:id="definition-lie_group_homomorphism">
+    `   <title>Lie Group Homomorphism</title>
+        <statement>
+            <p>
+                A <term> Lie group homomorphism</term> is a set map <m>f: G \to G'</m> between Lie groups that is both a group homomorphism and an smooth map.
             </p>
         </statement>
     </definition>
@@ -64,85 +39,232 @@
     <p>
         The following are examples of Lie groups:
         <ul>
-            <li> <m>\GL_n(\R)</m> and <m>\GL_n(\C)</m> </li>
-            <li> <m>\SL_n(\R)</m> and <m>\SL_n(\C)</m> </li>
+            <li> <m>\R^n</m> with vector addition </li>
+            <li> <m>\mathbb{R}^\times</m> with multiplication </li>
+            <li> <m>S^1 = \{ z \in \C : |z| = 1\}</m> with multiplication </li>
         </ul>
     </p>
 </example>
 
+<p>
+    The prototypical examples of Lie groups come from linear algebra and matrix groups.
+</p>
 
-    <definition>
-        <title>Left Invariant Vector Field</title>
-        <statement>
-            <p>
-                A <term> left invariant vector field</term> on a Lie group <m>G</m> is a vector field <m>X</m> such that for all <m>g,h \in G</m>, we have
-                <me> dL_g (X_h) = X_{gh}, </me>
-                where <m>L_g</m> is the left translation by <m>g</m>.
-            </p>
-        </statement>
-    </definition>
+<example>
+    <title>The General Linear Group</title>
+    <p>
+        We will denote the set of all <m>n \times n</m> matrices with real entries by <m>\Mat_n(\R)</m>.  This map is isomorphic to <m>\R^{n^2}</m>.  The map
+        <me> \det: \Mat_n(\R) \to \R, \quad A \mapsto \det(A) </me>
+        is a polynomial map on the entries of the matrix, and hence a smooth map.  The set of all <em>invertible</em> matrices with real entries, which is the preimage of <m>\R \setminus \{0\}</m> under the determinant map, is an open subset of <m>\Mat_n(\R)</m>, and hence a smooth manifold.  We call this set the rank <m>n</m> <term>general linear group</term> and denote it by <m>\GL_n(\R)</m>.
+    </p>
+    <p>
+        Observe that the group multiplication is given by polynomial maps on the entries of the matrices, and these maps are smooth.  Inversion is given by the adjugate matrix divided by the determinant, which is a rational function on its domain of definition.  Therefore the group structure maps of <m>\GL_n(\R)</m> are smooth.  
+    </p>
+    <p>
+        We can see the smoothness of these group structure maps concretely in the case of <m>\GL_2(\R)</m>.  If <m>A,B\in \GL_2(\R)</m> where <m>A = \begin{bmatrix} a \amp b\\c \amp d\end{bmatrix}</m> and <m>B = \begin{bmatrix} e \amp f\\g \amp h\end{bmatrix}</m>, then
+                
+        <me> AB = \begin{bmatrix} ae + bg \amp af + bh\\ce + dg \amp cf + dh\end{bmatrix}.</me>
+        
+        and 
 
-    <proposition xml:id="proposition-left_invariant_vector_fields_form_a_lie_algebra">
-        <statement>
-            <p>
-                If <m>G</m> is a Lie group, then the set <m>L(G)</m> of left invariant vector fields on <m>G</m> is a Lie subalgebra of <m>\mathfrak{X}(G)</m> under the Lie bracket of vector fields.
-            </p>
-        </statement>
-    </proposition>
+        <me> A^{-1} = \frac{1}{ad-bc}\begin{bmatrix} d \amp -b\\-c \amp a\end{bmatrix}.</me>
+    </p>
+</example>
+
+<p>
+    Make sure you understand the example of <m>\GL_2(\R)</m> deeply.  This is the prototypical example of a Lie group, and the ideas here will be used repeatedly in the rest of the course.
+</p>
+
+
+<p>
+    Now I want to emphasize a major point - Lie groups arise naturally as symmetry groups of geometric spaces that we care about.  For instance, the following theorem.
+</p>
 
 
 
-    <definition>
-        <title>Lie Algebra of a Lie Group</title>
-        <statement>
-            <p>
-                The <term> Lie algebra</term> of a Lie group <m>G</m>, which we will denote by <m>L(G)</m>, is the set of left-invariant vector fields on <m>G</m>, equipped with a bracket operation [ , ] that makes it a Lie algebra.
-            </p>
-        </statement>
-    </definition>
+<theorem xml:id="theorem-isometry_group_lie_group">
+    <title>Isometry Groups are Lie Group</title>
+    <creator>Myers-Steenrod, 1939</creator>
+<!--    <origins><xref ref="https://www.jstor.org/stable/1968928?origin=crossref"/></origins>-->
+    <statement>
+        <p>
+            If <m>M</m> is a smooth Riemannian manifold, then the isometry group <m>G= \mathrm{Isom}(M)</m> is a Lie group.
 
-    <proposition xml:id="proposition-lie_algebra_is_tangent_space_at_identity">
-        <statement>
-            <p>
-                The Lie algebra of a Lie group <m>G</m> is isomorphic as a vector space to the tangent space <m>T_eG</m> at the identity element <m>e</m>.
-            </p>
-        </statement>
-    </proposition>
+        </p>
+    </statement>
+</theorem>
+</subsection>    
 
+<subsection>
+    <title>Isometries of the Euclidean Plane</title>
     
-    <definition>
-    `   <title>Lie Group Homomorphism</title>
+
+    <p>
+        Let <m>M = \mathbb{E}^2</m> be the Euclidean plane with the standard metric
+    </p>
+    <me>
+        d((x_1,y_1),(x_2,y_2)) = \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2}.
+    </me>
+    <p>
+        The isometry group <m>\mathrm{Isom}(\mathbb{E}^2)</m> consists of all maps <m>f: \R^2 \to \R^2</m> that preserve distances.
+    </p>
+    <p>
+        <em>What elements are in <m>\mathrm{Isom}(\mathbb{E}^2)</m>?</em>
+    </p>
+    <p>
+        A few primary examples are
+        <ol>
+            <li>
+                <p>
+                    <term>Reflections</term> - If <m>\ell \subset \R^2</m> is a line, the map <m>r_\ell: \R^2 \to \R^2</m> defined by reflecting points across the line <m>\ell</m> is an isometry.
+                </p>
+            </li>
+            <li> 
+                <p>
+                    <term>Rotations</term> - If <m>P\in \mathbb{E}^2</m> is a point and <m>\theta \in [0,2\pi)</m> and angle measure, then the map <m>R_{P,\theta}: \R^2 \to \R^2</m> defined by rotating the plane around the point <m>P</m> by the angle <m>\theta</m> is an isometry.  
+                </p>
+            </li>
+            <li>
+                <p>
+                    <term>Translations</term> - If <m>\vec{v} \in \R^2</m> is a vector, then the map <m>T_{\vec{v}}: \R^2 \to \R^2</m> defined by <m>T_{\vec{v}}(x) = x + \vec{v}</m> is an isometry.
+                </p>
+            </li>
+
+        </ol>
+        
+    </p>
+
+
+    <proposition xml:id="proposition-euclidean_isometries_are_generated_by_reflections">
+        <title>Euclidean Isometries are Generated by Reflections</title>
         <statement>
             <p>
-                A <term> Lie group homomorphism</term> is a set map <m>f: G \to G'</m> between Lie groups that is both a group homomorphism and an smooth map.
-            </p>
-        </statement>
-    </definition>
-
-
-
-
-
-    <proposition>
-        <statement>
-            <p>
-                If <m>f: G \to G'</m> is a Lie group homomorphism, then <m>df: L(G) \to L(G')</m> is a Lie algebra homomorphism.
+                If <m>f \in \mathrm{Isom}(\mathbb{E}^2)</m>, then <m>f</m> can be written as a composition of three or fewer reflections.  In symbols, <me> \mathrm{Isom}(\mathbb{E}^2) = \langle \text{Reflections} \rangle.</me>
             </p>
         </statement>
     </proposition>
 
-    <proposition xml:id="proposition-lie_algebra_isomorphism_implies_local_diffeomorphism">
-        <title>Lie algebra isomorphism implies local diffeomorphism</title>
+
+    <proposition xml:id="proposition-orientation_preserving_euclidean_isometries_are_generated_by_reflections">
+        <title>Orientation-Preserving Euclidean Isometries are Generated by an Even Number of Reflections</title>
         <statement>
             <p>
-                If <m>f: G \to G'</m> is a Lie group homomorphism and <m>df: L(G) \to L(G')</m> is an isomorphism, then <m>f</m> is a local diffeomorphism.
+                If <m>f \in \mathrm{Isom}^+(\mathbb{E}^2)</m>, then <m>f</m> can be written as a composition of an even number of reflections.
             </p>
         </statement>
     </proposition>
 
+    <p>
+        If <m>P \in \mathbb{E}^2</m>, then let <m>K_P = \{ R_{P,\theta} \mid \theta \in [0,2\pi) \}</m>.  It is immediate that <m>K_P</m> is isomorphism to the circle group <m>S^1</m>.  Let <m>H = \{ T_{\vec{v}} \mid \vec{v} \in \R^2\}</m>.  It is immediate that <m>H</m> is isomorphic to the additive group <m>\R^2</m>.
+    </p>
+
+    <p>
+        The following are a few quick computations:
+            <me>T_{\vec{v}}\circ R_{P,\theta} \circ T_{\vec{v}}^{-1} = R_{T_{\vec{v}(P)},\theta}</me>
+            <me>R_{P,\theta} \circ T_{\vec{v}}\circ  R_{P,\theta}^{-1} = T_{R_{P,\theta}(\vec{v})}</me>
+        From this, we see that the group <m>K_P</m> is <em> not</em>  a normal subgroup of <m>\mathrm{Isom}^+(\mathbb{E}^2)</m>, but <m>H</m> is a normal subgroup.  Moreover, we see that <m>\mathrm{Isom}^+(\mathbb{E}^2)</m> is a semidirect product of the translation group and the rotation group
+        <me> \mathrm{Isom}^+(\mathbb{E}^2) = H \rtimes_{\varphi_1} K_P \cong \R^2 \rtimes_{\varphi_2} S^1 </me>
+        where <m>\varphi_1: K_P \to \mathrm{Aut}(H)</m> is the homomorphism defined by 
+        <me> \varphi_1(R_{P,\theta})(T_{\vec{v}}) = T_{R_{P,\theta}(\vec{v})}</me>
+        and where
+        <m>\varphi_2: S^1 \to \GL_2(\R)</m> is the homomorphism defined by 
+        <me> \varphi_2(\theta) = \begin{bmatrix} \cos \theta \amp -\sin \theta \\ \sin \theta \amp \cos \theta \end{bmatrix}.</me>
+    </p>
+    <p>
+        We have seen that <m>\mathrm{Isom}^+(\mathbb{E}^2)</m> is a Lie group, and we have just described its structure as a semidirect product of two Lie groups.  Here we can see that <m>\mathrm{Isom}^+(\mathbb{E}^2)</m> if a 3-dimensional connected solvable.
+    </p>
+    <p>
+        We can do more.  We may identify <m>\mathbb{E}^2</m> with the plane in <m>\R^3</m> with the z-coordinate equal to one.
+    </p>
+    <p> 
+        Even though translations of the plane are not linear maps, shear maps are linear, and the restriction of shear maps to the plane <m>z=1</m> are translations!  Therefore, we can identify <m>\mathrm{Isom}^+(\mathbb{E}^2)</m> with the following subgroup of <m>\GL_3(\R)</m>:
+    </p>
+    <me> \mathrm{Isom}^+(\mathbb{E}^2) \cong \left\{ \begin{bmatrix} \cos \theta \amp -\sin \theta \amp a \\ \sin \theta \amp \cos \theta   \amp b \\ 0 \amp 0 \amp 1 \end{bmatrix} \mid a,b \in \R, \theta \in [0,2\pi) \right\}.</me>
+    <p>
+        We see that <m>\mathrm{Isom}^+(\mathbb{E}^2)</m> is a 3-dimensional matrix Lie group, and we have an explicit embedding of it into <m>\GL_3(\R)</m>.
+    </p>
+
+</subsection>
+
+<subsection>
+    <title>Isometries of the Hyperbolic Plane</title>
+    
+
+    <p>
+        Let <m>M = \mathbb{H}^2</m> be the hyperbolic plane modeled with the Poincaré disk model and the standard metric
+    </p>
+    <me>
+        d(z_1,z_2) = 2\arctan \left( \frac{|z_1 - z_2|}{|\overline{z_1} z_2 - 1|} \right).
+    </me>
+    <p>
+        The isometry group <m>\mathrm{Isom}(\mathbb{H}^2)</m> consists of all maps <m>f: \mathbb{H}^2 \to \mathbb{H}^2</m> that preserve distances.
+    </p>
+    <p>
+        <em>What elements are in <m>\mathrm{Isom}(\mathbb{H}^2)</m>?</em>
+    </p>
+    <p>
+        The elements of <m>\mathrm{Isom}(\mathbb{H}^2)</m> actually rather similar to the entries of <m>\mathrm{Isom}(\mathbb{E}^2)</m>.  To begin we first need to understand the hyperbolic lines in the Poincaré disk model.  These are either diameters of the disk or arcs of circles that intersect the boundary of the disk at right angles.  I will call these <term>d-lines</term> to remind us they lines in the disk.  A Euclidean circle inversion through a circle is an analog of a reflection through a line in the Euclidean plane.  Circle inversions are conformal, so a circle inversion through a d-line preserves the Poincaré disk.  Both relfections through diameters and circle inversions through orthogonal circles are isometries, which I will call <term>d-reflections</term> to remind us they are reflections in the disk. 
+
+    </p>
+    <p>
+            <proposition xml:id="proposition-hyperbolic_isometries_are_generated_by_reflections">
+        <title>Hyperbolic Isometries are Generated by d-Reflections</title>
+        <statement>
+            <p>
+                If <m>f \in \mathrm{Isom}(\mathbb{H}^2)</m>, then <m>f</m> can be written as a composition of three or fewer d-reflections.  In symbols, <me> \mathrm{Isom}(\mathbb{H}^2) = \langle \text{d-Reflections} \rangle.</me>
+            </p>
+        </statement>
+    </proposition>
+
+    <interactive geogebra="qxuhrbfw" />
+
+    <proposition xml:id="proposition-orientation_preserving_hyperbolic_isometries_are_generated_by_reflections">
+        <title>Orientation-Preserving Hyperbolic Isometries are Generated by an Even Number of d-Reflections</title>
+        <statement>
+            <p>
+                If <m>f \in \mathrm{Isom}^+(\mathbb{H}^2)</m>, then <m>f</m> can be written as a composition of an even number of d-reflections.
+            </p>
+        </statement>
+    </proposition>
+    </p>
+    <p>
+        A few primary examples of orientation preserving isometries are
+        <ol>
+            <li>
+                <p>
+                    <term>Elliptic</term> - A composition of two d-reflections through d-lines that intersect in the disk is an elliptic isometry.  It has a unique fixed point in the disk, and it "rotates" around that point.
+                </p>
+            </li>
+            <li> 
+                <p>
+                    <term>Parabolic</term> - A composition of two d-reflections through d-lines that intersect on the boundary of the disk is a parabolic isometry.  It has a unique fixed point on the boundary.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <term>Hyperbolic</term> - A composition of two d-reflections through d-lines that do not intersect in the disk or the boundary of the disk is a hyperbolic isometry.  It has two fixed points on the boundary of the disk, and it "translates" along a geodesic connecting those points.
+                </p>
+            </li>
+
+        </ol>
+        
+    </p>
+
+    <interactive geogebra="qwajcpms" />
+
+    <p>
+        We can do more.  We may identify the Poincaré disk with the top sheet of the hyperboloid <m>x^2 + y^2 -z^2= -1</m> in <m>\R^3</m>.  How?  Place the Poincaré disk in the xy-plane and we may stereographically project from (0,0,-1) through the disk onto the hyperboloid.  In this way, a d-line is identifies with subspaces that intersect the hyperboloid.  
+    </p>
+    <interactive geogebra="m2ewnmpj" aspect="2:4" />
+
+
+    <p> 
+        Let <m>q(x,y,x) = x^2 + y^2 - z^2</m> be the quadratic form associated with the hyperboloid.  The set of matrices <m>A</m> such that <m>q(Ax)=q(x)</m> for all <m>x\in\R^3</m> is a closed subgroup of <m>\GL_3(\R)</m>.  This is the group of linear transformations that preserve the hyperboloid, and it is called the <term>orthogonal group</term> associated with the quadratic form <m>q</m>, and we denote it by <m>\mathrm{O}(q)</m>.  The subgroup of <m>\mathrm{O}(q)</m> that preserves orientation is denoted by <m>\SO(q)</m>.  With a little work, we may identify <m>\mathrm{Isom}^+(\mathbb{H}^2)</m> with the identity component of <m>\SO(q)</m>.
+        We have now seen that <m>\mathrm{Isom}^+(\mathbb{H}^2)</m> is a matrix Lie group, and we have an explicit embedding of it into <m>\GL_3(\R)</m>.
+    </p>
 
 
 
+</subsection>
 
-    </subsection>
 </section>

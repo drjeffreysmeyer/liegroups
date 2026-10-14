@@ -3,7 +3,7 @@
 <section xml:id="section_exponential" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Exponential Map</title>
 <p>
-    In this section we introduce exponential map.  As usual, we start with understanding the exponential map for matrices, extract its properties and then construct and analyze the formal object.
+    In this section we introduce exponential map.  We start with understanding the exponential map for matrices, extract its properties and then construct and analyze the formal object.
 </p>
 
 <subsection>
@@ -11,7 +11,37 @@
     <p>
         In this subsection we introduce the exponential matrix.  We will focus on the case of 2 by 2 matrices, but the results generalize to n by n matrices.
     </p>
-    
+
+    <proposition>
+        <statement>
+            <p>
+                If <m>g\in \GL_2(\R)</m> and <m>L_g:G\to G</m> is the left translation by <m>g</m>, then <me>dL_g: T_IG \to T_gG</me> where <m>dL_g(A)=gA</m>.
+            </p>
+        </statement>
+        <proof>
+            <title>Hint</title>
+            <statement> Look at the curve <m>c(t) = (I+tA)</m> and look at the tangent vector at <m>t=0</m> to the translated curve <m>L_g(c(t))</m>.</statement>
+        </proof>
+    </proposition>
+
+    <definition xml:id="definition-integral_curve">
+        <title>Integral Curve</title>
+        <statement>
+            <p>
+                If <m>M</m> is a smooth manifold and <m>X\in \mathfrak{X}(M)</m> is a smooth vector field, then a smooth curve <m>c:I\to M</m> is an <term>integral curve</term> of <m>X</m> if <m>c'(t) = X_{c(t)}</m> for all <m>t\in I</m>.
+            </p>
+        </statement>
+    </definition>
+
+
+    <p> 
+        If <m>A\in \Mat_2(\R)</m>, then observe that an integral curve to the left-invariant vector field <me>X_A(g) = gA</me> must satisfy the  equation <me>c'(t) = (c(t))A</me>.  This suggests from calculus that an integral curve should be an exponential function.  But how dow we make send of that for matrices?   Let's start with the formal power series:
+    </p>
+
+        <me> e^A := I + A + \frac{1}{2}A^2 + \frac{1}{6}A^3 + \cdots + \frac{1}{n!}A^n + \cdots</me>
+        
+    <p>  But doe this converge to a matrix?</p>
+
     <definition>
     <title>Frobenius Norm</title>
         <statement>
@@ -134,7 +164,7 @@
         Can you find a matrix <m>A\in \mf{gl}_2(\R)</m> such that <m>e^A = -I</m>?
 
     </p>
-
+<!--
     <remark>
         <title>Applications to Differential Equations</title>
         <p>
@@ -146,7 +176,7 @@
         </p>
 
     </remark>
-
+-->
 
   <proposition>
         <statement>
@@ -189,48 +219,143 @@
         Motivated by the intuition from the exponential matrix, in this subsection we introduce the exponential map for formal Lie groups.
     </p>
 
-    <definition>
-        <title>Exponential Map</title>
+    <identity xml:id="blackbox_theorem-integral_curves">
+        <title>There exists unique maximal integral curves</title>
         <statement>
             <p>
-                Let <m>\mathfrak{g}</m> be a Lie algebra associated with a Lie group <m>G</m>. The <term>exponential map</term> is a smooth function
-                <me> \exp: \mathfrak{g} \to G </me>
-                with the properties that
-                <ol>
-                    <li>
-                        <p>
-                            <me> \exp(0) = e </me>
-                            where <m>e</m> is the identity element of the Lie group <m>G</m>.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            The derivative of the exponential map at the origin is the identity map on the Lie algebra:
-                            <me> d\exp_0 = \mathrm{id}_{\mathfrak{g}} </me>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            If <m>X\in \mathfrak{g}</m>, then the curve <m>\gamma(t) = \exp(tX)</m> is a smooth homomorphism such that <m>\frac{d}{dt}\exp(tX)\big|_{t=0} = X</m>.
-                        </p>
-                    </li>
-                </ol>
+                If <m>M</m> is a smooth manifold, <m>p\in M</m>, and <m>X\in \mathfrak{X}(M)</m> is a smooth vector field, then there exists a unique smooth curve <m>c_X(t):(a,b)\to M</m> such that 
+                    <ol>
+                        <li>
+                            <p>
+                                (Based at p) <m>a &lt; 0 &lt; b</m> and <m>c_X(0) = p</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                (Integral) <m>c_X'(t) = X_{c_X(t)}</m> for all <m>t\in (a,b)</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                (Maximal) If <m>\tilde{c}:(\tilde{a},\tilde{b})\to M</m> is another integral curve with <m>\tilde{c}(0) = p</m>, then <m>(\tilde{a},\tilde{b}) \subset (a,b)</m> and <m>\tilde{c}(t) = c_X(t)</m> for all <m>t\in (\tilde{a},\tilde{b})</m>.
+                            </p>
+                        </li>   
+                    </ol>
             </p>
         </statement>
-    </definition>
+    </identity>
+
+    <p>
+        The proof of this theorem is a direct application of the existence and uniqueness theorem for ordinary differential equations. 
+    </p>
+
+    <p> 
+        If <m>X\in L(G)</m> is a left-invariant vector field on a Lie group <m>G</m>, then we denote its unique maximal integral curve based at the identity by <m>c_X(t)</m>.  
+    </p>
+
+
+    <p>
+        While we will not have explicit formulas for these integral curves of left-invariant vector fields, we will leverage the existence, uniqueness, and maximality to define and prove general properties of these integral curves.
+    </p>
+
+    <p>
+        It is valuable to observe that 
+            <ol>
+                <li>
+                    <p>
+                        If <m>X\in L(G)</m> and <m>g\in G</m>, then <m>L_g(c_X(t))</m> is an integral curve based at <m>g</m>.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If <m>X\in L(G)</m> and <m>s\in \R</m>, then <m>c(t-s)</m> is an integral curve based at <m>c(-s)</m>.
+                    </p>
+                </li>
+            </ol>
+    </p>
 
     <proposition>
-        <title>Existence of the Exponential Map</title>
+        <title> Integral curves of left-invariant vector fields are complete</title>
         <statement>
             <p>
-                If <m>G</m> is a Lie group with Lie algebra <m>\mathfrak{g}</m>, then there exists an exponential map.
+                If <m>G</m> is a Lie group and <m>X\in L(G)</m>, then the domain of the integral curve is <m>\R</m>.
             </p>
         </statement>
     </proposition>
 
-    <p>
-        Observe that the exponential map is necessarily unique, since the properties of the exponential map uniquely determine its behavior on a neighborhood of the identity.  
+    <proposition>
+        <title> Integral curves of left-invariant vector fields are homomorphisms</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group,  <m>X\in L(G)</m>, and <m>s,t\in \R</m>, then  <m>c_X(s+t) = c_X(s)c_X(t)</m>.
+            </p>
+        </statement>
+    </proposition>
+
+    <p> 
+        We are therefore justified in referring to the curves <m>c_X(t)</m> as <term>one-parameter subgroups</term> of the Lie group <m>G</m>.
     </p>
+    
+    <p>
+     We define the set map
+    </p>
+        <me> \exp: \mathfrak{g} \to G </me>
+    <p>
+        by
+    </p>
+
+        <me> \exp(X) = c_X(1). </me>
+
+
+    <p>
+        It is immediate from the definition that <m>\exp(0) = e</m> and that <m>\exp(tX) = c_X(t)</m> for all <m>t\in \R</m>. 
+    </p>
+
+    <proposition>
+        <title>The exponential map is smooth</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group with Lie algebra <m>\mathfrak{g}</m>, then the exponential map is smooth.
+            </p>
+        </statement>
+        <proof>
+            <title>Hint</title>
+            <p>
+                We know the exponential map is smooth along the an integral curve for a fixed left-invariant vector field.  Need to show it is smooth as we vary the left-invariant vector field.  
+            </p>
+        </proof>
+    </proposition>
+
+    <proposition>
+        <title>The differential of the exponential map is the identity</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group with Lie algebra <m>\mathfrak{g}</m>, then <m>d\exp_0</m> is the identity map.
+            </p>
+        </statement>
+        <proof>
+            <title>Hint</title>
+            <p>
+                
+            </p>
+        </proof>
+    </proposition>
+
+    <proposition>
+        <title>The exponential map is a local diffeomorphism</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group with Lie algebra <m>\mathfrak{g}</m>,  the exponential map is a local diffeomorphism at the identity.
+            </p>
+        </statement>
+        <proof>
+            <title>Hint</title>
+            <p>
+                Use the inverse function theorem. 
+            </p>
+        </proof>
+    </proposition>
+
 
     <proposition>
         <statement>
@@ -247,16 +372,8 @@
         </statement>
     </proposition>
 
-    <corollary>
-        <statement>
-            <p>
-              If <m>G</m> is a Lie group and <m>H</m> is a Lie subgroup of <m>G</m>, then the exponential map of <m>G</m> restricts to the exponential map of <m>H</m>. 
-            </p>
-        </statement>
-    </corollary>
-
     <p>
-        Typically the best charts on a Lie group are the exponential charts.  In particular, if <m>G</m> is a Lie group with Lie algebra <m>\mathfrak{g}</m>, then there exists an open neighborhood <m>U\subset \mathfrak{g}</m> of the origin and an open neighborhood <m>V\subset G</m> of the identity such that <m>\exp: U \to V</m> is a diffeomorphism.  The inverse map <m>\log: V \to U</m> is called the <term>logarithm map</term>.
+        Typically the best charts on a Lie group are the exponential charts.  In particular, if <m>G</m> is a Lie group with Lie algebra <m>\mathfrak{g}</m>, then there exists an open neighborhood <m>U\subset \mathfrak{g}</m> of the origin and an open neighborhood <m>V\subset G</m> of the identity such that <m>\exp: U \to V</m> is a diffeomorphism.
     </p>  
 
 
@@ -264,6 +381,31 @@
     <p>
         Questions:  When is the exponential map surjective?  When is it injective?  When is it bijective?  When is it a diffeomorphism?
     </p>  
+
+
+    <proposition>
+        <title>Differential of the multiplication map is addition</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group and <m>\mu:G\times G \to G</m> is the multiplication map, then <m>d\mu_{(e,e)}:T_eG \times T_eG \to T_eG</m> is given by addition, i.e. <m>d\mu_{(e,e)}(X,Y) = X+Y</m>.
+            </p>
+        </statement>
+    </proposition>
+
+<p> While the exponential map is not a homomorphism, it is a homomorphism to first order.</p>
+
+        <proposition>
+        <title>Exponentiation is a <q>first order</q> homomorphism</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group, <m>t\in \mathbb{R}</m>, and <m>X,Y\in L(G)</m>, then <m>\exp(tX)\exp(tY) = \exp(X+Y+O(t^2))</m> where <m>O(t^2)</m> is an <m>L(G)</m>-valued function such that <m>\frac{1}{t^2}O(t^2)</m> is bounded at <m>t=0</m>.
+            </p>
+        </statement>
+    </proposition>
+
+<p> 
+    This is the start of a more general result known as the Baker-Campbell-Hausdorff formula, which gives an explicit formula for <m>O(t^2)</m> in terms of brackets of <m>X</m> and <m>Y</m>.
+</p>
 
     </subsection>
 </section>

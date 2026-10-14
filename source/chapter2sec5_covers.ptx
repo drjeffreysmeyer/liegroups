@@ -17,7 +17,7 @@
     </definition>
 
 
-    <theorem xml:id="theorem-lifting_of_maps">
+    <identity xml:id="theorem-lifting_of_maps">
         <title>Lifting of Maps</title>
         <statement>
             <p>
@@ -32,18 +32,18 @@
             </latex-image>
         </image>
         </statement>
-    </theorem>
+    </identity>
 
-    <theorem xml:id="theorem-simply_connected_covering_spaces">
+    <identity xml:id="theorem-simply_connected_covering_spaces">
         <title>Existence of Simply Connected Covering Spaces</title>
         <statement>
             <p>
                 If <m>X</m> is a path connected, locally path connected, and semilocally simply connected, then there exists a simply connected covering space <m>\tilde{X}</m> and a covering map <m>\pi: \tilde{X} \to X</m>.
             </p>
         </statement>
-    </theorem>
+    </identity>
 
-    <theorem xml:id="theorem-lifting_of_lie_algebra_homomorphisms">
+    <proposition xml:id="theorem-lifting_of_lie_algebra_homomorphisms">
         <title>Lifting of Lie Algebra Homomorphisms</title>
         <statement>
             <p>
@@ -58,17 +58,17 @@
             </latex-image>
         </image>
         </statement>
-    </theorem>
+    </proposition>
 
 
-    <theorem xml:id="theorem-covering_space_lie_group">
+    <proposition xml:id="theorem-covering_space_lie_group">
         <title>Covering Space of a Lie Group</title>
         <statement>
             <p>
                 If <m>G</m> is a connected Lie group, then there exists a simply connected Lie group <m>\tilde{G}</m> and a covering map <m>\pi: \tilde{G} \to G</m> which is also a Lie group homomorphism.
             </p>
         </statement>
-    </theorem>
+    </proposition>
 
 
     

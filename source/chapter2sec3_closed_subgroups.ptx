@@ -6,8 +6,8 @@
     In this section we introduce closed subgroups of Lie groups.  As usual, we start with understanding the closed subgroups for matrix groups, extract their properties and then construct and analyze the formal object.
 </p>
 
-<interactive geogebra="ysjuuuuq" />
 
+<!--
 <subsection>
     <title>Closed Subgroups of Matrix Lie Groups</title>
     
@@ -25,7 +25,7 @@
     </p>
 
 </subsection>
-
+-->
 
 <subsection>
     <title>Cartan's Theorem </title>
@@ -38,24 +38,6 @@
             </p>
         </statement>
     </definition>    
-
-    <proposition>
-        <statement>
-            <p>
-                If <m>G</m> is a Lie group and <m>H \subset G</m> is an embedded Lie subgroup, then <m>H</m> is closed in <m>G</m>.
-            </p>
-        </statement>
-
-        <proof>
-            <title>Hint</title>
-            <p>
-                Use the fact that an embedded submanifold is closed.
-            </p>
-        </proof>
-    </proposition>
-
-
-
 
 
 
@@ -76,30 +58,28 @@
         </p>
     </proof>
 
-
-    <theorem xml:id="theorem-Cartan">
-        <title>Closed Subgroups are Embedded Lie Subgroups</title>
-        <creator>Cartan</creator>
+<theorem xml:id="theorem-cartan-subgroup">
+        <title>Closed subgroups are embedded Lie subgroups</title>
+        <creator>Cartan, 1930</creator>
         <statement>
             <p>
                 If <m>G</m> is a Lie group and <m>H \subset G</m> is a closed subgroup, then <m>H</m> is an embedded Lie subgroup of <m>G</m>.
             </p>
         </statement>
-    </theorem>
 
-    <proof>
+        <proof>
         <p>
             
         </p>
     </proof>
 
+    </theorem>
 
-</subsection>
 
 
-<subsection>
-    <title>Consequences of Cartan's Theorem</title>
 
+
+    
     <proposition>
         <title>Continuous Homomorphisms are Smooth</title>
         <statement>
@@ -110,5 +90,29 @@
     </proposition>
 
 
-    </subsection>
+
+
+    <proposition>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group and <m>H \subset G</m> is an embedded Lie subgroup, then <m>H</m> is closed in <m>G</m>.
+            </p>
+        </statement>
+
+        <proof>
+            <title>Hint</title>
+            <p>
+                
+            </p>
+        </proof>
+    </proposition>
+
+</subsection>
+
+
+
+
+
+
+
 </section>

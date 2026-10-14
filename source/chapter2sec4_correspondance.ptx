@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="section_correspondance" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Lie's Third Theorem</title>
+  <title>Immersed Subgroups</title>
 <p>
-    In this section we introduce closed subgroups of Lie groups.  As usual, we start with understanding the closed subgroups for matrix groups, extract their properties and then construct and analyze the formal object.
+    
 </p>
 
+<interactive geogebra="ysjuuuuq" />
 
     <definition>
     `   <title>Lie Subgroup</title>
@@ -16,15 +17,16 @@
         </statement>
     </definition>
 
-    
+<!--    
 <subsection>
     <title>Lie's Third Theorem</title>
+-->
 
     <definition>
         <title>Distribution</title>
             <statement>
             <p>
-                If <m>M</m> is a smooth manifold, then an <m>m</m>-dimensional <term>smooth distribution</term> is a smooth association of each point <m>x\in M</m> an <m>m</m>-dimensional subspace of <m>D_x\subset T_xM</m>.  In otherwords, it section into the Grassman bundle <m>\mathrm{Gr}_m(TM)</m>.
+                If <m>M</m> is a smooth manifold, then an <m>m</m>-dimensional <term>smooth distribution</term> is a smooth association of each point <m>x\in M</m> an <m>m</m>-dimensional subspace of <m>D_x\subset T_xM</m>.  In otherwords, it section into the Grassmanian bundle <m>\mathrm{Gr}_m(TM)</m>.
             </p>
         </statement>
     </definition>
@@ -33,7 +35,7 @@
         <title>Involutive Distribution</title>
             <statement>
             <p>
-                If <m>M</m> is a smooth manifold, then an <m>m</m>-dimensional <term>involutive distribution</term> is a smooth distribution <m>D\subset TM</m> such that for any two vector fields <m>X,Y\in\Gamma(D)</m>, their Lie bracket <m>[X,Y]</m> is also in <m>\Gamma(D)</m>.
+                If <m>M</m> is a smooth manifold, then an <m>m</m>-dimensional <term>involutive distribution</term> is a smooth distribution <m>D\subset TM</m> such that for any two vector fields <m>X,Y\in D</m>, their Lie bracket <m>[X,Y]</m> is also in <m>D</m>.
             </p>
         </statement>
     </definition>
@@ -46,7 +48,7 @@
         </statement>
     </proposition>
 
-    <theorem>
+    <identity>
         <title>Involutive Distributions are Integrable</title>
         <creator>Frobenius</creator>        
         <statement>
@@ -54,26 +56,29 @@
                 If <m>M</m> is a smooth manifold and <m>D\subset TM</m> is an involutive distribution, then there exists a unique maximal integral manifold <m>N\subset M</m> such that <m>TN=D</m>.
             </p>
         </statement>
-    </theorem>
+    </identity>
 
     <theorem>
-        <title>Lie's Third Theorem</title>
+        <title>(Lie's Third Theorem)</title>
         <statement>
             <p>
                 If <m>G</m> is a Lie group and <m>\mathfrak{h} \subset L(G)</m> is a Lie subalgebra, then there exists a connected immersed Lie subgroup <m>H</m> of <m>G</m> with Lie algebra <m>L(H) = \mathfrak{h}</m>.
             </p>
         </statement>
-    </theorem>
-    
 
     <proof>
         <p>
             
         </p>
     </proof>
+    
+        </theorem>
+    
 
 
-</subsection>
+
+
+
 
 
 
