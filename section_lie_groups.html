@@ -17,11 +17,8 @@
 <title>Lie Groups</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<style>
-@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
-</style>
 <link rel="stylesheet" type="text/css" href="external/custom.css">
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -31,7 +28,7 @@ isReact: false,
 htmlPresentation: false,
 lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Constructing Lie Groups">
@@ -40,7 +37,7 @@ lang: "en-US",
 <meta name="twitter:description" content="An Investigative Approach">
 <meta property="og:description" content="An Investigative Approach">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -62,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -119,7 +116,7 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter02.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter02.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section_exponential.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter02.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter02.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section_lie_algebras.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(    \newcommand{\N}{\mathbb N} 
     \newcommand{\Z}{\mathbb Z} 
     \newcommand{\Q}{\mathbb Q} 
@@ -155,6 +152,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\pf}{\begin{proof}\noindent \leftskip 0.3in}
 \newcommand{\epf}{\end{proof}}
 \newcommand{\ind}{\hspace{2pc}}
+
 
 
     \DeclareMathOperator{\Aut}{Aut} \DeclareMathOperator{\Out}{Out}
@@ -212,68 +210,40 @@ eBookConfig.enable_chatcodes =  false;
 <div class="ptx-page">
 <div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="chapter01.html" class="internal"><span class="codenumber">1</span> <span class="title">Background</span></a></div>
-<ul id="ptx-toc-group-chapter01" class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="chp1sec1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Topological Groups</span></a></div>
-<ul id="ptx-toc-group-chp1sec1" class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="chp1sec1.html#chp1sec1-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Point-Set Topology of Topological Groups</span></a></div>
-<ul id="ptx-toc-group-chp1sec1-3" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chp1sec1.html#exercises-21" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Exercises</span></a></div></li></ul>
-</li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="chp1sec2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Group Actions</span></a></div>
-<ul id="ptx-toc-group-chp1sec2" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chp1sec2.html#chp1sec2-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Group Actions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chp1sec2.html#chp1sec2-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Linear Group Actions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="chp1sec2.html#chp1sec2-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Groups Arising from <span class="process-math">\(\Ham\)</span></span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section_manifolds.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Manifolds</span></a></div>
-<ul id="ptx-toc-group-section_manifolds" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_manifolds.html#section_manifolds-2" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Manifolds</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_manifolds.html#section_manifolds-3" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Tangent Spaces</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_manifolds.html#section_manifolds-4" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Differential Maps</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section_vector_fields.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Vector Fields</span></a></div>
-<ul id="ptx-toc-group-section_vector_fields" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_vector_fields.html#section_vector_fields-2" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Vector Fields</span></a></div></li></ul>
-</li>
-</ul>
-</li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="chapter02.html" class="internal"><span class="codenumber">2</span> <span class="title">Lie Objects</span></a></div>
+<div class="toc-title-box"><a href="chapter02.html" class="internal"><span class="codenumber">1</span> <span class="title">Fundamentals of Lie Groups</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter02">
 <li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="section_lie_groups.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lie Groups</span></a></div>
+<div class="toc-title-box"><a href="section_lie_groups.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Lie Groups</span></a></div>
 <ul class="structural toc-item-list active" id="ptx-toc-group-section_lie_groups">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_groups.html#section_lie_groups-3" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Matrix Lie Groups</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_groups.html#section_lie_groups-4" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Lie Groups 101</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_groups.html#section_lie_groups-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">First Definitions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_groups.html#section_lie_groups-4" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Isometries of the Euclidean Plane</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_groups.html#section_lie_groups-5" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Isometries of the Hyperbolic Plane</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section_exponential.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Exponential Map</span></a></div>
+<div class="toc-title-box"><a href="section_lie_algebras.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Lie Algebras</span></a></div>
+<ul id="ptx-toc-group-section_lie_algebras" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_algebras.html#section_lie_algebras-3" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Manifolds</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_algebras.html#section_lie_algebras-4" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Tangent Spaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_algebras.html#section_lie_algebras-5" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Differential Maps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_algebras.html#section_lie_algebras-6" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Vector Fields</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_lie_algebras.html#section_lie_algebras-7" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Left-Invariant Vector Fields</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section_exponential.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Exponential Map</span></a></div>
 <ul id="ptx-toc-group-section_exponential" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_exponential.html#section_exponential-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Exponential Matrix</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_exponential.html#section_exponential-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">The Exponential Map</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_exponential.html#section_exponential-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">The Exponential Matrix</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_exponential.html#section_exponential-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">The Exponential Map</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section_closed_subgroups.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Closed Subgroups</span></a></div>
-<ul id="ptx-toc-group-section_closed_subgroups" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_closed_subgroups.html#section_closed_subgroups-4" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Closed Subgroups of Matrix Lie Groups</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_closed_subgroups.html#section_closed_subgroups-5" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Cartan’s Theorem</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_closed_subgroups.html#section_closed_subgroups-6" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Consequences of Cartan’s Theorem</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="section_closed_subgroups.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Closed Subgroups</span></a></div>
+<ul id="ptx-toc-group-section_closed_subgroups" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_closed_subgroups.html#section_closed_subgroups-3" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Cartan’s Theorem</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section_correspondance.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Lie’s Third Theorem</span></a></div>
-<ul id="ptx-toc-group-section_correspondance" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section_correspondance.html#section_correspondance-4" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Lie’s Third Theorem</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section_covers.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Covers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section_correspondance.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Immersed Subgroups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section_covers.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Covers</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -281,151 +251,302 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section_lie_groups">
 <h1 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Groups</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Groups</span>
 </h1>
-<div class="para" id="section_lie_groups-2">In this section we introduce Lie groups.  We start with understanding the matrix Lie groups, extract their properties and then construct and analyze the formal object.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section_lie_groups-2">In this section we introduce Lie groups.  We give their definition and many motivating examples from linear algebra and Riemannian geometry.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <section class="subsection" id="section_lie_groups-3">
 <h2 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Matrix Lie Groups</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">First Definitions</span>
 </h2>
-<div class="para logical" id="section_lie_groups-3-2">
-<div class="para">We already know that <span class="process-math">\(\GL_2(\R)\)</span> is a locally compact topological group, but we know more.  As a subset of <span class="process-math">\(\R^{4}\text{,}\)</span> it is an open set.  Therefore, it is a smooth manifold. If <span class="process-math">\(A,B\in \GL_n(\R)\)</span> where <span class="process-math">\(A = \begin{bmatrix} a \amp b\\c \amp d\end{bmatrix}\)</span> and <span class="process-math">\(B = \begin{bmatrix} e \amp f\\g \amp h\end{bmatrix}\text{,}\)</span> then</div>
-<div class="displaymath process-math" id="section_lie_groups-3-2-6">
+<article class="definition definition-like" id="definition-lie_group"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Groups.</span>
+</h3>
+<div class="para" id="definition-lie_group-2-1">A <dfn class="terminology">Lie group</dfn> is a smooth manifold that is also a group, such that the group structure maps <span class="process-math">\(\mu:G \times G \to G \)</span> and <span class="process-math">\(i:  G \to G \)</span> are smooth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-lie_group-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 1.1.1: Lie Groups"><a tabindex="-1" href="#definition-lie_group" title="Copy heading and permalink for Definition 1.1.1: Lie Groups" aria-label="Copy heading and permalink for Definition 1.1.1: Lie Groups">🔗</a></div>
+</article>
+<article class="definition definition-like" id="definition-lie_group_homomorphism"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Group Homomorphism.</span>
+</h3>
+<div class="para" id="definition-lie_group_homomorphism-2-1">A <dfn class="terminology">Lie group homomorphism</dfn> is a set map <span class="process-math">\(f: G \to G'\)</span> between Lie groups that is both a group homomorphism and an smooth map.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#definition-lie_group_homomorphism-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 1.1.2: Lie Group Homomorphism"><a tabindex="-1" href="#definition-lie_group_homomorphism" title="Copy heading and permalink for Definition 1.1.2: Lie Group Homomorphism" aria-label="Copy heading and permalink for Definition 1.1.2: Lie Group Homomorphism">🔗</a></div>
+</article>
+<article class="remark remark-like" id="section_lie_groups-3-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Smooth vs Analytic.</span>
+</h3>
+<div class="para" id="section_lie_groups-3-4-2">You will find that some authors define Lie groups as analytic manifolds (e.g. Serre).  While it might seem this is a stronger condition than being smooth, in fact, every smooth Lie group admits a unique analytic structure compatible with the smooth structure.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 1.1.3: Smooth vs Analytic"><a tabindex="-1" href="#section_lie_groups-3-4" title="Copy heading and permalink for Remark 1.1.3: Smooth vs Analytic" aria-label="Copy heading and permalink for Remark 1.1.3: Smooth vs Analytic">🔗</a></div>
+</article>
+<article class="example example-like" id="section_lie_groups-3-5"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples of Lie Groups.</span>
+</h3>
+<div class="para logical" id="section_lie_groups-3-5-2">
+<div class="para">The following are examples of Lie groups:</div>
+<ul class="disc" id="section_lie_groups-3-5-2-1">
+<li id="section_lie_groups-3-5-2-1-1">
+<div class="para" id="p-derived-section_lie_groups-3-5-2-1-1">
+<span class="process-math">\(\R^n\)</span> with vector addition</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section_lie_groups-3-5-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section_lie_groups-3-5-2-1-2">
+<div class="para" id="p-derived-section_lie_groups-3-5-2-1-2">
+<span class="process-math">\(\mathbb{R}^\times\)</span> with multiplication</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section_lie_groups-3-5-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section_lie_groups-3-5-2-1-3">
+<div class="para" id="p-derived-section_lie_groups-3-5-2-1-3">
+<span class="process-math">\(S^1 = \{ z \in \C : |z| = 1\}\)</span> with multiplication</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section_lie_groups-3-5-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.1.4: Examples of Lie Groups"><a tabindex="-1" href="#section_lie_groups-3-5" title="Copy heading and permalink for Example 1.1.4: Examples of Lie Groups" aria-label="Copy heading and permalink for Example 1.1.4: Examples of Lie Groups">🔗</a></div>
+</article>
+<div class="para" id="section_lie_groups-3-6">The prototypical examples of Lie groups come from linear algebra and matrix groups.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="section_lie_groups-3-7"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The General Linear Group.</span>
+</h3>
+<div class="para logical" id="section_lie_groups-3-7-2">
+<div class="para">We will denote the set of all <span class="process-math">\(n \times n\)</span> matrices with real entries by <span class="process-math">\(\Mat_n(\R)\text{.}\)</span>  This map is isomorphic to <span class="process-math">\(\R^{n^2}\text{.}\)</span>  The map</div>
+<div class="displaymath process-math" id="section_lie_groups-3-7-2-4">
+\begin{equation*}
+\det: \Mat_n(\R) \to \R, \quad A \mapsto \det(A) 
+\end{equation*}
+</div>
+<div class="para">is a polynomial map on the entries of the matrix, and hence a smooth map.  The set of all <em class="emphasis">invertible</em> matrices with real entries, which is the preimage of <span class="process-math">\(\R \setminus \{0\}\)</span> under the determinant map, is an open subset of <span class="process-math">\(\Mat_n(\R)\text{,}\)</span> and hence a smooth manifold.  We call this set the rank <span class="process-math">\(n\)</span> <dfn class="terminology">general linear group</dfn> and denote it by <span class="process-math">\(\GL_n(\R)\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section_lie_groups-3-7-3">Observe that the group multiplication is given by polynomial maps on the entries of the matrices, and these maps are smooth.  Inversion is given by the adjugate matrix divided by the determinant, which is a rational function on its domain of definition.  Therefore the group structure maps of <span class="process-math">\(\GL_n(\R)\)</span> are smooth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section_lie_groups-3-7-4">
+<div class="para">We can see the smoothness of these group structure maps concretely in the case of <span class="process-math">\(\GL_2(\R)\text{.}\)</span>  If <span class="process-math">\(A,B\in \GL_2(\R)\)</span> where <span class="process-math">\(A = \begin{bmatrix} a \amp b\\c \amp d\end{bmatrix}\)</span> and <span class="process-math">\(B = \begin{bmatrix} e \amp f\\g \amp h\end{bmatrix}\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="section_lie_groups-3-7-4-5">
 \begin{equation*}
 AB = \begin{bmatrix} ae + bg \amp af + bh\\ce + dg \amp cf + dh\end{bmatrix}.
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math" id="section_lie_groups-3-2-7">
+<div class="displaymath process-math" id="section_lie_groups-3-7-4-6">
 \begin{equation*}
 A^{-1} = \frac{1}{ad-bc}\begin{bmatrix} d \amp -b\\-c \amp a\end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para">Observe that the group multiplication is given by polynomial maps on the entries of the matrices, and these maps are smooth.  Inversion is given by the adjugate matrix divided by the determinant, which is a rational function on its domain of definition.  Therefore the group structure maps of <span class="process-math">\(\GL_2(\R)\)</span> are smooth.</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="section_lie_groups-3-3">
-<div class="para">The tangent space at the identity is <span class="process-math">\(T_I\GL_2(\R) = \R^{2\times 2}\)</span> and the Lie bracket is given by the commutator of matrices,</div>
-<div class="displaymath process-math" id="section_lie_groups-3-3-2">
-\begin{equation*}
-[A,B] = AB - BA.
-\end{equation*}
+<div class="autopermalink" aria-hidden="true" data-description="Example 1.1.5: The General Linear Group"><a tabindex="-1" href="#section_lie_groups-3-7" title="Copy heading and permalink for Example 1.1.5: The General Linear Group" aria-label="Copy heading and permalink for Example 1.1.5: The General Linear Group">🔗</a></div>
+</article>
+<div class="para" id="section_lie_groups-3-8">Make sure you understand the example of <span class="process-math">\(\GL_2(\R)\)</span> deeply.  This is the prototypical example of a Lie group, and the ideas here will be used repeatedly in the rest of the course.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section_lie_groups-3-9">Now I want to emphasize a major point - Lie groups arise naturally as symmetry groups of geometric spaces that we care about.  For instance, the following theorem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="section_lie_groups-3-4">More generally, but for the same reasons, <span class="process-math">\(\GL_n(\R)\)</span> an open, and hence smooth subset of <span class="process-math">\(\R^{n^2}\text{.}\)</span> The group multiplication is given by polynomial maps on the entries of the matrices, and these maps are smooth.  Inversion is given by the adjugate matrix divided by the determinant, which is a rational function on its domain of definition.  Therefore the group structure maps of <span class="process-math">\(\GL_n(\R)\)</span> are smooth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="theorem theorem-like" id="theorem-isometry_group_lie_group"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isometry Groups are Lie Group.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="attribution">(<span class="creator">Myers-Steenrod, 1939</span>)</span>
+</h3>
+<div class="para" id="theorem-isometry_group_lie_group-3-1">If <span class="process-math">\(M\)</span> is a smooth Riemannian manifold, then the isometry group <span class="process-math">\(G= \mathrm{Isom}(M)\)</span> is a Lie group.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#theorem-isometry_group_lie_group-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Subsection 2.1.1: Matrix Lie Groups"><a tabindex="-1" href="#section_lie_groups-3" title="Copy heading and permalink for Subsection 2.1.1: Matrix Lie Groups" aria-label="Copy heading and permalink for Subsection 2.1.1: Matrix Lie Groups">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 1.1.6: Isometry Groups are Lie Group"><a tabindex="-1" href="#theorem-isometry_group_lie_group" title="Copy heading and permalink for Theorem 1.1.6: Isometry Groups are Lie Group" aria-label="Copy heading and permalink for Theorem 1.1.6: Isometry Groups are Lie Group">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 1.1.1: First Definitions"><a tabindex="-1" href="#section_lie_groups-3" title="Copy heading and permalink for Subsection 1.1.1: First Definitions" aria-label="Copy heading and permalink for Subsection 1.1.1: First Definitions">🔗</a></div>
 </section>
 <section class="subsection" id="section_lie_groups-4">
 <h2 class="heading hide-type">
-<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Groups 101</span>
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isometries of the Euclidean Plane</span>
 </h2>
-<article class="definition definition-like" id="section_lie_groups-4-2"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Groups.</span>
-</h3>
-<div class="para" id="section_lie_groups-4-2-2-1">A <dfn class="terminology">Lie group</dfn> is a smooth manifold that is also a group, such that the group structure maps <span class="process-math">\(G \times G \to G \)</span> and <span class="process-math">\(G \to G \)</span> are smooth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section_lie_groups-4-2">Let <span class="process-math">\(M = \mathbb{E}^2\)</span> be the Euclidean plane with the standard metric<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.1: Lie Groups"><a tabindex="-1" href="#section_lie_groups-4-2" title="Copy heading and permalink for Definition 2.1.1: Lie Groups" aria-label="Copy heading and permalink for Definition 2.1.1: Lie Groups">🔗</a></div>
-</article>
-<article class="remark remark-like" id="section_lie_groups-4-3"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Smooth vs Analytic.</span>
-</h3>
-<div class="para" id="section_lie_groups-4-3-2">You will find that some authors define Lie groups as analytic manifolds (e.g. Serre).  While it might seem this is a stronger condition than being smooth, in fact, every smooth Lie group admits a unique analytic structure compatible with the smooth structure.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Remark 2.1.2: Smooth vs Analytic"><a tabindex="-1" href="#section_lie_groups-4-3" title="Copy heading and permalink for Remark 2.1.2: Smooth vs Analytic" aria-label="Copy heading and permalink for Remark 2.1.2: Smooth vs Analytic">🔗</a></div>
-</article>
-<article class="example example-like" id="section_lie_groups-4-4"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples of Lie Groups.</span>
-</h3>
-<div class="para logical" id="section_lie_groups-4-4-2">
-<div class="para">The following are examples of Lie groups:</div>
-<ul class="disc" id="section_lie_groups-4-4-2-1">
-<li id="section_lie_groups-4-4-2-1-1">
-<div class="para" id="p-derived-section_lie_groups-4-4-2-1-1">
-<span class="process-math">\(\GL_n(\R)\)</span> and <span class="process-math">\(\GL_n(\C)\)</span>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section_lie_groups-4-4-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="section_lie_groups-4-4-2-1-2">
-<div class="para" id="p-derived-section_lie_groups-4-4-2-1-2">
-<span class="process-math">\(\SL_n(\R)\)</span> and <span class="process-math">\(\SL_n(\C)\)</span>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section_lie_groups-4-4-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 2.1.3: Examples of Lie Groups"><a tabindex="-1" href="#section_lie_groups-4-4" title="Copy heading and permalink for Example 2.1.3: Examples of Lie Groups" aria-label="Copy heading and permalink for Example 2.1.3: Examples of Lie Groups">🔗</a></div>
-</article>
-<article class="definition definition-like" id="section_lie_groups-4-5"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Left Invariant Vector Field.</span>
-</h3>
-<div class="para logical" id="section_lie_groups-4-5-2-1">
-<div class="para">A <dfn class="terminology">left invariant vector field</dfn> on a Lie group <span class="process-math">\(G\)</span> is a vector field <span class="process-math">\(X\)</span> such that for all <span class="process-math">\(g,h \in G\text{,}\)</span> we have</div>
-<div class="displaymath process-math" id="section_lie_groups-4-5-2-1-5">
+<div class="displaymath process-math" id="section_lie_groups-4-3">
 \begin{equation*}
-dL_g (X_h) = X_{gh}, 
+d((x_1,y_1),(x_2,y_2)) = \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2}.
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(L_g\)</span> is the left translation by <span class="process-math">\(g\text{.}\)</span>
+<div class="para" id="section_lie_groups-4-4">The isometry group <span class="process-math">\(\mathrm{Isom}(\mathbb{E}^2)\)</span> consists of all maps <span class="process-math">\(f: \R^2 \to \R^2\)</span> that preserve distances.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section_lie_groups-4-5">
+<em class="emphasis">What elements are in <span class="process-math">\(\mathrm{Isom}(\mathbb{E}^2)\text{?}\)</span></em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.4: Left Invariant Vector Field"><a tabindex="-1" href="#section_lie_groups-4-5" title="Copy heading and permalink for Definition 2.1.4: Left Invariant Vector Field" aria-label="Copy heading and permalink for Definition 2.1.4: Left Invariant Vector Field">🔗</a></div>
-</article>
-<article class="proposition theorem-like" id="proposition-left_invariant_vector_fields_form_a_lie_algebra"><h3 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="para logical" id="section_lie_groups-4-6">
+<div class="para">A few primary examples are</div>
+<ol class="decimal" id="section_lie_groups-4-6-1">
+<li id="section_lie_groups-4-6-1-1">
+<div class="para" id="section_lie_groups-4-6-1-1-1">
+<dfn class="terminology">Reflections</dfn> - If <span class="process-math">\(\ell \subset \R^2\)</span> is a line, the map <span class="process-math">\(r_\ell: \R^2 \to \R^2\)</span> defined by reflecting points across the line <span class="process-math">\(\ell\)</span> is an isometry.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#section_lie_groups-4-6-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="section_lie_groups-4-6-1-2">
+<div class="para" id="section_lie_groups-4-6-1-2-1">
+<dfn class="terminology">Rotations</dfn> - If <span class="process-math">\(P\in \mathbb{E}^2\)</span> is a point and <span class="process-math">\(\theta \in [0,2\pi)\)</span> and angle measure, then the map <span class="process-math">\(R_{P,\theta}: \R^2 \to \R^2\)</span> defined by rotating the plane around the point <span class="process-math">\(P\)</span> by the angle <span class="process-math">\(\theta\)</span> is an isometry.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-6-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#section_lie_groups-4-6-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="section_lie_groups-4-6-1-3">
+<div class="para" id="section_lie_groups-4-6-1-3-1">
+<dfn class="terminology">Translations</dfn> - If <span class="process-math">\(\vec{v} \in \R^2\)</span> is a vector, then the map <span class="process-math">\(T_{\vec{v}}: \R^2 \to \R^2\)</span> defined by <span class="process-math">\(T_{\vec{v}}(x) = x + \vec{v}\)</span> is an isometry.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-6-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#section_lie_groups-4-6-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="proposition-euclidean_isometries_are_generated_by_reflections"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Euclidean Isometries are Generated by Reflections.</span>
 </h3>
-<div class="para" id="proposition-left_invariant_vector_fields_form_a_lie_algebra-1-1">If <span class="process-math">\(G\)</span> is a Lie group, then the set <span class="process-math">\(L(G)\)</span> of left invariant vector fields on <span class="process-math">\(G\)</span> is a Lie subalgebra of <span class="process-math">\(\mathfrak{X}(G)\)</span> under the Lie bracket of vector fields.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-left_invariant_vector_fields_form_a_lie_algebra-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="proposition-euclidean_isometries_are_generated_by_reflections-2-1">
+<div class="para">If <span class="process-math">\(f \in \mathrm{Isom}(\mathbb{E}^2)\text{,}\)</span> then <span class="process-math">\(f\)</span> can be written as a composition of three or fewer reflections.  In symbols,</div>
+<div class="displaymath process-math" id="proposition-euclidean_isometries_are_generated_by_reflections-2-1-3">
+\begin{equation*}
+\mathrm{Isom}(\mathbb{E}^2) = \langle \text{Reflections} \rangle.
+\end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proposition 2.1.5"><a tabindex="-1" href="#proposition-left_invariant_vector_fields_form_a_lie_algebra" title="Copy heading and permalink for Proposition 2.1.5" aria-label="Copy heading and permalink for Proposition 2.1.5">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-euclidean_isometries_are_generated_by_reflections-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 1.1.7: Euclidean Isometries are Generated by Reflections"><a tabindex="-1" href="#proposition-euclidean_isometries_are_generated_by_reflections" title="Copy heading and permalink for Proposition 1.1.7: Euclidean Isometries are Generated by Reflections" aria-label="Copy heading and permalink for Proposition 1.1.7: Euclidean Isometries are Generated by Reflections">🔗</a></div>
 </article>
-<article class="definition definition-like" id="section_lie_groups-4-7"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Algebra of a Lie Group.</span>
+<article class="proposition theorem-like" id="proposition-orientation_preserving_euclidean_isometries_are_generated_by_reflections"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orientation-Preserving Euclidean Isometries are Generated by an Even Number of Reflections.</span>
 </h3>
-<div class="para" id="section_lie_groups-4-7-2-1">The <dfn class="terminology">Lie algebra</dfn> of a Lie group <span class="process-math">\(G\text{,}\)</span> which we will denote by <span class="process-math">\(L(G)\text{,}\)</span> is the set of left-invariant vector fields on <span class="process-math">\(G\text{,}\)</span> equipped with a bracket operation [ , ] that makes it a Lie algebra.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="proposition-orientation_preserving_euclidean_isometries_are_generated_by_reflections-2-1">If <span class="process-math">\(f \in \mathrm{Isom}^+(\mathbb{E}^2)\text{,}\)</span> then <span class="process-math">\(f\)</span> can be written as a composition of an even number of reflections.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-orientation_preserving_euclidean_isometries_are_generated_by_reflections-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.6: Lie Algebra of a Lie Group"><a tabindex="-1" href="#section_lie_groups-4-7" title="Copy heading and permalink for Definition 2.1.6: Lie Algebra of a Lie Group" aria-label="Copy heading and permalink for Definition 2.1.6: Lie Algebra of a Lie Group">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 1.1.8: Orientation-Preserving Euclidean Isometries are Generated by an Even Number of Reflections"><a tabindex="-1" href="#proposition-orientation_preserving_euclidean_isometries_are_generated_by_reflections" title="Copy heading and permalink for Proposition 1.1.8: Orientation-Preserving Euclidean Isometries are Generated by an Even Number of Reflections" aria-label="Copy heading and permalink for Proposition 1.1.8: Orientation-Preserving Euclidean Isometries are Generated by an Even Number of Reflections">🔗</a></div>
 </article>
-<article class="proposition theorem-like" id="proposition-lie_algebra_is_tangent_space_at_identity"><h3 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="para" id="proposition-lie_algebra_is_tangent_space_at_identity-1-1">The Lie algebra of a Lie group <span class="process-math">\(G\)</span> is isomorphic as a vector space to the tangent space <span class="process-math">\(T_eG\)</span> at the identity element <span class="process-math">\(e\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lie_algebra_is_tangent_space_at_identity-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section_lie_groups-4-9">If <span class="process-math">\(P \in \mathbb{E}^2\text{,}\)</span> then let <span class="process-math">\(K_P = \{ R_{P,\theta} \mid \theta \in [0,2\pi) \}\text{.}\)</span>  It is immediate that <span class="process-math">\(K_P\)</span> is isomorphism to the circle group <span class="process-math">\(S^1\text{.}\)</span>  Let <span class="process-math">\(H = \{ T_{\vec{v}} \mid \vec{v} \in \R^2\}\text{.}\)</span>  It is immediate that <span class="process-math">\(H\)</span> is isomorphic to the additive group <span class="process-math">\(\R^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proposition 2.1.7"><a tabindex="-1" href="#proposition-lie_algebra_is_tangent_space_at_identity" title="Copy heading and permalink for Proposition 2.1.7" aria-label="Copy heading and permalink for Proposition 2.1.7">🔗</a></div>
-</article>
-<article class="definition definition-like" id="section_lie_groups-4-9"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie Group Homomorphism.</span>
-</h3>
-<div class="para" id="section_lie_groups-4-9-2-1">A <dfn class="terminology">Lie group homomorphism</dfn> is a set map <span class="process-math">\(f: G \to G'\)</span> between Lie groups that is both a group homomorphism and an smooth map.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="section_lie_groups-4-10">
+<div class="para">The following are a few quick computations:</div>
+<div class="displaymath process-math" id="section_lie_groups-4-10-1">
+\begin{equation*}
+T_{\vec{v}}\circ R_{P,\theta} \circ T_{\vec{v}}^{-1} = R_{T_{\vec{v}(P)},\theta}
+\end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.8: Lie Group Homomorphism"><a tabindex="-1" href="#section_lie_groups-4-9" title="Copy heading and permalink for Definition 2.1.8: Lie Group Homomorphism" aria-label="Copy heading and permalink for Definition 2.1.8: Lie Group Homomorphism">🔗</a></div>
-</article>
-<article class="proposition theorem-like" id="section_lie_groups-4-10"><h3 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<div class="para" id="section_lie_groups-4-10-1-1">If <span class="process-math">\(f: G \to G'\)</span> is a Lie group homomorphism, then <span class="process-math">\(df: L(G) \to L(G')\)</span> is a Lie algebra homomorphism.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="displaymath process-math" id="section_lie_groups-4-10-2">
+\begin{equation*}
+R_{P,\theta} \circ T_{\vec{v}}\circ  R_{P,\theta}^{-1} = T_{R_{P,\theta}(\vec{v})}
+\end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proposition 2.1.9"><a tabindex="-1" href="#section_lie_groups-4-10" title="Copy heading and permalink for Proposition 2.1.9" aria-label="Copy heading and permalink for Proposition 2.1.9">🔗</a></div>
-</article>
-<article class="proposition theorem-like" id="proposition-lie_algebra_isomorphism_implies_local_diffeomorphism"><h3 class="heading">
-<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lie algebra isomorphism implies local diffeomorphism.</span>
-</h3>
-<div class="para" id="proposition-lie_algebra_isomorphism_implies_local_diffeomorphism-2-1">If <span class="process-math">\(f: G \to G'\)</span> is a Lie group homomorphism and <span class="process-math">\(df: L(G) \to L(G')\)</span> is an isomorphism, then <span class="process-math">\(f\)</span> is a local diffeomorphism.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-lie_algebra_isomorphism_implies_local_diffeomorphism-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">From this, we see that the group <span class="process-math">\(K_P\)</span> is <em class="emphasis">not</em>  a normal subgroup of <span class="process-math">\(\mathrm{Isom}^+(\mathbb{E}^2)\text{,}\)</span> but <span class="process-math">\(H\)</span> is a normal subgroup.  Moreover, we see that <span class="process-math">\(\mathrm{Isom}^+(\mathbb{E}^2)\)</span> is a semidirect product of the translation group and the rotation group</div>
+<div class="displaymath process-math" id="section_lie_groups-4-10-8">
+\begin{equation*}
+\mathrm{Isom}^+(\mathbb{E}^2) = H \rtimes_{\varphi_1} K_P \cong \R^2 \rtimes_{\varphi_2} S^1 
+\end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Proposition 2.1.10: Lie algebra isomorphism implies local diffeomorphism"><a tabindex="-1" href="#proposition-lie_algebra_isomorphism_implies_local_diffeomorphism" title="Copy heading and permalink for Proposition 2.1.10: Lie algebra isomorphism implies local diffeomorphism" aria-label="Copy heading and permalink for Proposition 2.1.10: Lie algebra isomorphism implies local diffeomorphism">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.1.2: Lie Groups 101"><a tabindex="-1" href="#section_lie_groups-4" title="Copy heading and permalink for Subsection 2.1.2: Lie Groups 101" aria-label="Copy heading and permalink for Subsection 2.1.2: Lie Groups 101">🔗</a></div>
-</section><div class="autopermalink" aria-hidden="true" data-description="Section 2.1: Lie Groups"><a tabindex="-1" href="#section_lie_groups" title="Copy heading and permalink for Section 2.1: Lie Groups" aria-label="Copy heading and permalink for Section 2.1: Lie Groups">🔗</a></div>
+<div class="para">where <span class="process-math">\(\varphi_1: K_P \to \mathrm{Aut}(H)\)</span> is the homomorphism defined by</div>
+<div class="displaymath process-math" id="section_lie_groups-4-10-10">
+\begin{equation*}
+\varphi_1(R_{P,\theta})(T_{\vec{v}}) = T_{R_{P,\theta}(\vec{v})}
+\end{equation*}
+</div>
+<div class="para">and where <span class="process-math">\(\varphi_2: S^1 \to \GL_2(\R)\)</span> is the homomorphism defined by</div>
+<div class="displaymath process-math" id="section_lie_groups-4-10-12">
+\begin{equation*}
+\varphi_2(\theta) = \begin{bmatrix} \cos \theta \amp -\sin \theta \\ \sin \theta \amp \cos \theta \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section_lie_groups-4-11">We have seen that <span class="process-math">\(\mathrm{Isom}^+(\mathbb{E}^2)\)</span> is a Lie group, and we have just described its structure as a semidirect product of two Lie groups.  Here we can see that <span class="process-math">\(\mathrm{Isom}^+(\mathbb{E}^2)\)</span> if a 3-dimensional connected solvable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section_lie_groups-4-12">We can do more.  We may identify <span class="process-math">\(\mathbb{E}^2\)</span> with the plane in <span class="process-math">\(\R^3\)</span> with the z-coordinate equal to one.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section_lie_groups-4-13">Even though translations of the plane are not linear maps, shear maps are linear, and the restriction of shear maps to the plane <span class="process-math">\(z=1\)</span> are translations!  Therefore, we can identify <span class="process-math">\(\mathrm{Isom}^+(\mathbb{E}^2)\)</span> with the following subgroup of <span class="process-math">\(\GL_3(\R)\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="section_lie_groups-4-14">
+\begin{equation*}
+\mathrm{Isom}^+(\mathbb{E}^2) \cong \left\{ \begin{bmatrix} \cos \theta \amp -\sin \theta \amp a \\ \sin \theta \amp \cos \theta   \amp b \\ 0 \amp 0 \amp 1 \end{bmatrix} \mid a,b \in \R, \theta \in [0,2\pi) \right\}.
+\end{equation*}
+</div>
+<div class="para" id="section_lie_groups-4-15">We see that <span class="process-math">\(\mathrm{Isom}^+(\mathbb{E}^2)\)</span> is a 3-dimensional matrix Lie group, and we have an explicit embedding of it into <span class="process-math">\(\GL_3(\R)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-4-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 1.1.2: Isometries of the Euclidean Plane"><a tabindex="-1" href="#section_lie_groups-4" title="Copy heading and permalink for Subsection 1.1.2: Isometries of the Euclidean Plane" aria-label="Copy heading and permalink for Subsection 1.1.2: Isometries of the Euclidean Plane">🔗</a></div>
+</section>
+<section class="subsection" id="section_lie_groups-5">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Isometries of the Hyperbolic Plane</span>
+</h2>
+<div class="para" id="section_lie_groups-5-2">Let <span class="process-math">\(M = \mathbb{H}^2\)</span> be the hyperbolic plane modeled with the Poincaré disk model and the standard metric<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="section_lie_groups-5-3">
+\begin{equation*}
+d(z_1,z_2) = 2\arctan \left( \frac{|z_1 - z_2|}{|\overline{z_1} z_2 - 1|} \right).
+\end{equation*}
+</div>
+<div class="para" id="section_lie_groups-5-4">The isometry group <span class="process-math">\(\mathrm{Isom}(\mathbb{H}^2)\)</span> consists of all maps <span class="process-math">\(f: \mathbb{H}^2 \to \mathbb{H}^2\)</span> that preserve distances.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section_lie_groups-5-5">
+<em class="emphasis">What elements are in <span class="process-math">\(\mathrm{Isom}(\mathbb{H}^2)\text{?}\)</span></em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section_lie_groups-5-6">The elements of <span class="process-math">\(\mathrm{Isom}(\mathbb{H}^2)\)</span> actually rather similar to the entries of <span class="process-math">\(\mathrm{Isom}(\mathbb{E}^2)\text{.}\)</span>  To begin we first need to understand the hyperbolic lines in the Poincaré disk model.  These are either diameters of the disk or arcs of circles that intersect the boundary of the disk at right angles.  I will call these <dfn class="terminology">d-lines</dfn> to remind us they lines in the disk.  A Euclidean circle inversion through a circle is an analog of a reflection through a line in the Euclidean plane.  Circle inversions are conformal, so a circle inversion through a d-line preserves the Poincaré disk.  Both relfections through diameters and circle inversions through orthogonal circles are isometries, which I will call <dfn class="terminology">d-reflections</dfn> to remind us they are reflections in the disk.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section_lie_groups-5-7">
+<article class="proposition theorem-like" id="proposition-hyperbolic_isometries_are_generated_by_reflections"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hyperbolic Isometries are Generated by d-Reflections.</span>
+</h3>
+<div class="para logical" id="proposition-hyperbolic_isometries_are_generated_by_reflections-2-1">
+<div class="para">If <span class="process-math">\(f \in \mathrm{Isom}(\mathbb{H}^2)\text{,}\)</span> then <span class="process-math">\(f\)</span> can be written as a composition of three or fewer d-reflections.  In symbols,</div>
+<div class="displaymath process-math" id="proposition-hyperbolic_isometries_are_generated_by_reflections-2-1-3">
+\begin{equation*}
+\mathrm{Isom}(\mathbb{H}^2) = \langle \text{d-Reflections} \rangle.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-hyperbolic_isometries_are_generated_by_reflections-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 1.1.9: Hyperbolic Isometries are Generated by d-Reflections"><a tabindex="-1" href="#proposition-hyperbolic_isometries_are_generated_by_reflections" title="Copy heading and permalink for Proposition 1.1.9: Hyperbolic Isometries are Generated by d-Reflections" aria-label="Copy heading and permalink for Proposition 1.1.9: Hyperbolic Isometries are Generated by d-Reflections">🔗</a></div>
+</article> <div class="interactive-iframe-container"><iframe id="section_lie_groups-5-7-2" style="width:600px; height:600px; display: block; " src="section_lie_groups-5-7-2-if.html"></iframe></div>
+<div class="interactive-iframe-container__opener"><a href="section_lie_groups-5-7-2.html" title="Open in new tab" aria-label="Open in new tab" target="_blank"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe89e;</span></a></div> 
+<article class="proposition theorem-like" id="proposition-orientation_preserving_hyperbolic_isometries_are_generated_by_reflections"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orientation-Preserving Hyperbolic Isometries are Generated by an Even Number of d-Reflections.</span>
+</h3>
+<div class="para" id="proposition-orientation_preserving_hyperbolic_isometries_are_generated_by_reflections-2-1">If <span class="process-math">\(f \in \mathrm{Isom}^+(\mathbb{H}^2)\text{,}\)</span> then <span class="process-math">\(f\)</span> can be written as a composition of an even number of d-reflections.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#proposition-orientation_preserving_hyperbolic_isometries_are_generated_by_reflections-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Proposition 1.1.10: Orientation-Preserving Hyperbolic Isometries are Generated by an Even Number of d-Reflections"><a tabindex="-1" href="#proposition-orientation_preserving_hyperbolic_isometries_are_generated_by_reflections" title="Copy heading and permalink for Proposition 1.1.10: Orientation-Preserving Hyperbolic Isometries are Generated by an Even Number of d-Reflections" aria-label="Copy heading and permalink for Proposition 1.1.10: Orientation-Preserving Hyperbolic Isometries are Generated by an Even Number of d-Reflections">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section_lie_groups-5-8">
+<div class="para">A few primary examples of orientation preserving isometries are</div>
+<ol class="decimal" id="section_lie_groups-5-8-1">
+<li id="section_lie_groups-5-8-1-1">
+<div class="para" id="section_lie_groups-5-8-1-1-1">
+<dfn class="terminology">Elliptic</dfn> - A composition of two d-reflections through d-lines that intersect in the disk is an elliptic isometry.  It has a unique fixed point in the disk, and it "rotates" around that point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-8-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#section_lie_groups-5-8-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="section_lie_groups-5-8-1-2">
+<div class="para" id="section_lie_groups-5-8-1-2-1">
+<dfn class="terminology">Parabolic</dfn> - A composition of two d-reflections through d-lines that intersect on the boundary of the disk is a parabolic isometry.  It has a unique fixed point on the boundary.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-8-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#section_lie_groups-5-8-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="section_lie_groups-5-8-1-3">
+<div class="para" id="section_lie_groups-5-8-1-3-1">
+<dfn class="terminology">Hyperbolic</dfn> - A composition of two d-reflections through d-lines that do not intersect in the disk or the boundary of the disk is a hyperbolic isometry.  It has two fixed points on the boundary of the disk, and it "translates" along a geodesic connecting those points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-8-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#section_lie_groups-5-8-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="interactive-iframe-container"><iframe id="section_lie_groups-5-9" style="width:600px; height:600px; display: block; " src="section_lie_groups-5-9-if.html"></iframe></div>
+<div class="interactive-iframe-container__opener"><a href="section_lie_groups-5-9.html" title="Open in new tab" aria-label="Open in new tab" target="_blank"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe89e;</span></a></div>
+<div class="para" id="section_lie_groups-5-10">We can do more.  We may identify the Poincaré disk with the top sheet of the hyperboloid <span class="process-math">\(x^2 + y^2 -z^2= -1\)</span> in <span class="process-math">\(\R^3\text{.}\)</span>  How?  Place the Poincaré disk in the xy-plane and we may stereographically project from (0,0,-1) through the disk onto the hyperboloid.  In this way, a d-line is identifies with subspaces that intersect the hyperboloid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="interactive-iframe-container"><iframe id="section_lie_groups-5-11" style="width:600px; height:1200px; display: block; " src="section_lie_groups-5-11-if.html"></iframe></div>
+<div class="interactive-iframe-container__opener"><a href="section_lie_groups-5-11.html" title="Open in new tab" aria-label="Open in new tab" target="_blank"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe89e;</span></a></div>
+<div class="para" id="section_lie_groups-5-12">Let <span class="process-math">\(q(x,y,x) = x^2 + y^2 - z^2\)</span> be the quadratic form associated with the hyperboloid.  The set of matrices <span class="process-math">\(A\)</span> such that <span class="process-math">\(q(Ax)=q(x)\)</span> for all <span class="process-math">\(x\in\R^3\)</span> is a closed subgroup of <span class="process-math">\(\GL_3(\R)\text{.}\)</span>  This is the group of linear transformations that preserve the hyperboloid, and it is called the <dfn class="terminology">orthogonal group</dfn> associated with the quadratic form <span class="process-math">\(q\text{,}\)</span> and we denote it by <span class="process-math">\(\mathrm{O}(q)\text{.}\)</span>  The subgroup of <span class="process-math">\(\mathrm{O}(q)\)</span> that preserves orientation is denoted by <span class="process-math">\(\SO(q)\text{.}\)</span>  With a little work, we may identify <span class="process-math">\(\mathrm{Isom}^+(\mathbb{H}^2)\)</span> with the identity component of <span class="process-math">\(\SO(q)\text{.}\)</span> We have now seen that <span class="process-math">\(\mathrm{Isom}^+(\mathbb{H}^2)\)</span> is a matrix Lie group, and we have an explicit embedding of it into <span class="process-math">\(\GL_3(\R)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section_lie_groups-5-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 1.1.3: Isometries of the Hyperbolic Plane"><a tabindex="-1" href="#section_lie_groups-5" title="Copy heading and permalink for Subsection 1.1.3: Isometries of the Hyperbolic Plane" aria-label="Copy heading and permalink for Subsection 1.1.3: Isometries of the Hyperbolic Plane">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 1.1: Lie Groups"><a tabindex="-1" href="#section_lie_groups" title="Copy heading and permalink for Section 1.1: Lie Groups" aria-label="Copy heading and permalink for Section 1.1: Lie Groups">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter02.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section_exponential.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter02.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section_lie_algebras.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,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"></a>
 </div>
 </body>
 </html>
