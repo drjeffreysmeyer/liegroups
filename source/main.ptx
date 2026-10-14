@@ -4,7 +4,7 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="Constructing_Number_Theory">
+  <book xml:id="Constructing_Lie_Groups">
     <title>Constructing Lie Groups</title>
     <subtitle>An Investigative Approach</subtitle>
 
