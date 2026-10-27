@@ -3,8 +3,75 @@
 <section xml:id="section_covers" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Covers</title>
 <p>
-    In this section we introduce closed subgroups of Lie groups.  As usual, we start with understanding the closed subgroups for matrix groups, extract their properties and then construct and analyze the formal object.
+  
 </p>
+
+<subsection>
+    <title>Fundamental Groups of Topological Groups</title>
+
+    Here we assume some familiarity with algebraic topology and quickly review some of the relevant definitions and results. 
+
+    <definition xml:id="definition-loops">
+        <title>Loops</title>
+        <statement>
+            <p>
+                If <m>(X,x_0)</m> is a pointed topological space, then a <term>based loop</term> is a map 
+                <me> c:[0,1]\to X </me> such that <m>c(0) = c(1) = x_0</m>.
+            </p>
+        </statement>
+    </definition>
+
+    <p>  We may define the <term>concatenation</term> of two based loops <m>c_1, c_2:[0,1]\to X</m> by
+    <me> (c_1 * c_2)(t) = \begin{cases} c_1(2t) \amp 0\le t \le 1/2 \\ c_2(2t-1) \amp 1/2 \le t \le 1 \end{cases} </me>
+    Concatenation defines a group operation on based homotopy classes of loops.  The set of based loops up to homotopy forms a group
+    <me> \pi_1(X,x_0) = \{ [c] : c \text{ is a based loop in } X \text{ based at } x_0 \} </me> called the <term>fundamental group</term> of <m>(X,x_0)</m>.
+    </p>
+
+    <p>
+        Now suppose that <m>(G,e)</m> is a topological group with <m>e</m> as the identity element.  Then we may also define the pointwise multiplication of two based loops <m>c_1, c_2:[0,1]\to G</m> is given by
+    <me> (c_1 \cdot c_2)(t) = c_1(t) \cdot c_2(t) </me>
+    where the product on the right-hand side is the group operation in <m>G</m>.  Amazingly, concatenation and pointwise multiplication of loops are compatible!
+    </p>    
+
+
+        <proposition xml:id="proposition-compatibility_of_loop_operations">
+        <title>Compatibility of Loop Operations</title>
+        <statement>
+            <p>
+                If <m>c_1,c_2,c_3,c_4</m> are loops based at the identity of a topological group <m>G</m>, then 
+                <m>(c_1 * c_2) \cdot (c_3 * c_4) = (c_1 \cdot c_3) * (c_2 \cdot c_4)</m>.
+            </p>
+        </statement>
+    </proposition>
+
+        <proposition xml:id="proposition-concatenation_and_pointwise_multiplication_are_homotopic">
+        <title>Concatenation and Pointwise Multiplication are Homotopic</title>
+        <statement>
+            <p>
+                If <m>c_1,c_4</m> are loops based at the identity of a topological group <m>G</m>, then 
+                <m>[c_1 \cdot c_4] = [c_1 * c_4]</m>.
+            </p>
+        </statement>
+    </proposition>
+
+     <proposition xml:id="proposition-fundamental_group_of_a_topological_group_is_abelian">
+        <title>The Fundamental Group of a Topological Group is Abelian</title>
+        <statement>
+            <p>
+                If <m>G</m> is a topological group, then its fundamental group <m>\pi_1(G,e)</m> is abelian.
+            </p>
+        </statement>
+    </proposition>
+
+</subsection>
+
+<subsection>
+    <title>Covering Spaces</title>
+
+
+
+
+
 
 
     <definition xml:id="definition-covering_space">
@@ -17,7 +84,7 @@
     </definition>
 
 
-    <identity xml:id="theorem-lifting_of_maps">
+    <identity xml:id="blackbox_theorem-lifting_of_maps">
         <title>Lifting of Maps</title>
         <statement>
             <p>
@@ -34,6 +101,42 @@
         </statement>
     </identity>
 
+
+
+     <proposition xml:id="proposition-cover_of_a_topological_group_is_a_topological_group">
+        <title>Cover of a Topological Group is a Topological Group</title>
+        <statement>
+            <p>
+                If <m>G</m> is a connected topological group, <m>p:G'\to G</m> a connected covering space, and <m>e'\in p^{-1}(e)</m> for some <m>e\in G</m>, then <m>G'</m> admits a unique topological group structure such that <m>p</m> is a group homomorphism and <m>e'</m> is the identity element.
+            </p>
+        </statement>
+    </proposition>
+
+     <proposition xml:id="proposition-cover_of_a_lie_group_is_a_topological_group">
+        <title>Cover of a Lie Group is a Lie Group</title>
+        <statement>
+            <p>
+                If <m>p:G'\to G</m> is a covering map of topological groups, and <m>G</m> is a connected Lie group, then <m>G'</m> admits a unique Lie group structure such that <m>p</m> is a Lie group homomorphism.
+            </p>
+        </statement>
+    </proposition>
+
+</subsection>
+
+
+
+<subsection>
+    <title>Simply Connected Covers</title>
+
+    <definition xml:id="definition-simply_connected_cover">
+        <title>Simply Connected Cover</title>   
+        <statement>
+            <p>
+                A simply connected covering space of a topological space <m>X</m> is a covering space <m>\tilde{X}</m> such that <m>\pi_1(\tilde{X})</m> is trivial.
+            </p>
+        </statement>
+    </definition>
+
     <identity xml:id="theorem-simply_connected_covering_spaces">
         <title>Existence of Simply Connected Covering Spaces</title>
         <statement>
@@ -42,6 +145,11 @@
             </p>
         </statement>
     </identity>
+
+    <p> 
+        By the lifting property <xref ref="blackbox_theorem-lifting_of_maps"/> simply connected covering spaces cover all other covers.  This is a <q>universal</q> property and hence are simetimes called <term>universal covers</term>.  As a consequence, simply connected covering spaces are unique up to homeomorphism. 
+    </p>
+
 
     <proposition xml:id="theorem-lifting_of_lie_algebra_homomorphisms">
         <title>Lifting of Lie Algebra Homomorphisms</title>
@@ -61,7 +169,7 @@
     </proposition>
 
 
-    <proposition xml:id="theorem-covering_space_lie_group">
+    <proposition xml:id="proposition-covering_space_lie_group">
         <title>Covering Space of a Lie Group</title>
         <statement>
             <p>
@@ -71,7 +179,17 @@
     </proposition>
 
 
-    
+        <proposition xml:id="proposition-equivalence_of_categories">
+        <title>Equivalence of Categories</title>
+        <statement>
+            <p>
+                The category of simply connected Lie groups and Lie group homomorphisms is equivalent to the category of finite dimensional real Lie algebras and Lie algebra homomorphisms. 
+            </p>
+        </statement>
+    </proposition>
 
+
+    
+</subsection>
 
 </section>

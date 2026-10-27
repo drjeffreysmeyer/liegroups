@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="section_adjoint" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Adjoint Representation</title>
+<p>
+    In this section we introduce the adjoint representation of a Lie group and its associated Lie algebra. 
+</p>
+
+<subsection>
+    <title>The adjoint representations of a Lie group</title>
+
+<p> 
+    Pick <m>g\in G</m> and consider the map <m>\mathrm{i}_g: G \to G</m> defined by group conjugation <m>\mathrm{i}_g(h) = g h g^{-1}</m>.  Since all group structure maps are smooth, the map <m>\mathrm{i}_g</m> is a diffeomorphism of <m>G</m>.  If is a quick check shows that <m>\mathrm{i}_g</m> is a  group homomorphism.  The map <m>\mathrm{i}_g</m> is called the <term>inner automorphism</term> of <m>G</m> associated to <m>g\in G</m>.
+</p>
+
+    <proposition xml:id="proposition-inner_automorphisms_are_lie_group_homomorphisms">
+        <title>Inner automorphisms are Lie group homomorphisms</title>
+        <statement>
+            <p>
+                If <m>g\in G</m> and <m>\mathrm{i}_g: G \to G</m> is the inner automorphism associated to <m>g</m>, then <m>\mathrm{i}_g</m> is a Lie group homomorphism.
+            </p>
+        </statement>
+    </proposition>  
+
+<p>
+    The differential of this map at the identity element <m>e\in G</m> gives an invertible linear map <m>\mathrm{Ad}_g: L(G) \to L(G)</m>.  Consequently, the following diagram commutes:
+</p>
+  <md>
+    \begin{CD}
+      G @>i_g>> G \\
+      @A{\exp}AA @AA{\exp}A \\
+      L(G) @>>{Ad_g}> L(G)
+    \end{CD}
+  </md>
+<p>
+    Upon allowing <m>g\in G</m> to vary, we obtain a map <m>\mathrm{Ad}: G \to \mathrm{GL}(L(G))</m> called the <term>adjoint representation</term> of <m>G</m>.
+</p>
+
+
+
+    <definition xml:id="definition-adjoint_representation">
+        <title>The adjoint representation of a Lie group</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group, then the <term>adjoint representation</term> of <m>G</m> is the map <me>\mathrm{Ad}: G \to \mathrm{GL}(L(G))</me> defined by <m> \mathrm{Ad}(g):= \mathrm{Ad}_g</m>.
+            </p>
+        </statement>
+    </definition>
+
+
+    <proposition xml:id="proposition-adjoint_representation_of_matrix_groups">
+        <title>The adjoint representation of matrix groups</title>
+        <statement>
+            <p>
+                If <m>G</m> is a matrix Lie group, then the adjoint representation can be identified with the conjugation action of <m>G</m> on its Lie algebra <m>L(G)</m>.  More precisely, if <m>g\in G</m> and <m>X\in L(G)</m>, then <me>\mathrm{Ad}_g(X) = g X g^{-1}.</me>
+            </p>
+        </statement>
+    </proposition>
+
+    <proposition xml:id="proposition-image_and_kernel_of_map">
+        <title>The image and kernel of a Lie group homomorphism</title>
+        <statement>
+            <p>
+                If <m>f:G_1\to G_2</m> is a Lie group homomorphism, then 
+            </p>
+            <ol>
+                <li>
+                    <p>
+                        The image <m>f(G_1)</m> is a Lie subgroup of <m>G_2</m> with Lie algebra <m>df(L(G_1))</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The kernel <m>\ker(f)</m> is a closed Lie subgroup of <m>G_1</m> with Lie algebra <m>\ker(df)</m>.
+                    </p>
+                </li>
+            </ol>
+        </statement>
+    </proposition>  
+
+    <definition xml:id="definition-adjoint_group">
+        <title>The adjoint group</title>
+        <statement>
+            <p>
+                The <term>adjoint group</term> of a Lie group <m>G</m> is the image of the adjoint representation, denoted <m>\mathrm{Ad}(G)</m>. 
+            </p>
+        </statement>
+    </definition>  
+
+
+    <p>
+        The adjoint group <m>\mathrm{Ad}(G)</m> is a Lie subgroup of <m>\mathrm{GL}(L(G))</m> with Lie algebra <m>\mathrm{dAd}(L(G))</m>.
+    </p>
+
+
+<p><alert>What is this group?  How similar is it to the original group?</alert></p>
+
+    <proposition xml:id="proposition-kernel_of_adjoint_representation_is_center">
+        <title>The Kernel of the adjoint representation is the center of the group</title>
+        <statement>
+            <p>
+                If <m>G</m> is a connected Lie group, then <m>\ker(\mathrm{Ad}) = Z(G)</m>, where <m>Z(G)</m> is the center of <m>G</m>.
+            </p>
+        </statement>
+    </proposition>
+
+<p>
+    So <m>Ad(G)\cong G/Z(G)</m>, which means the adjoint group is the original group modulo its center.  If the group has a large center (e.g. if it is solvable), then the adjoint group is much smaller than the original group.  If the group has a discrete center, then the adjoint group is covered by the original group (e.g. simple semisimple groups).  
+</p>
+
+<p> 
+    Differentiating the adjoint representation gives a Lie algebra homomorphism <m>ad: L(G) \to \mathfrak{gl}(L(G))</m> defined by <me>ad(X) = dAd(X)</me>.
+</p>
+
+    <definition xml:id="definition-adjoint_representation_ad">
+        <title>The adjoint representation of a Lie algebra</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group, then the <term>adjoint representation</term> of <m>L(G)</m> is the map <me>\mathrm{ad}: L(G) \to \mathfrak{gl}(L(G))</me> defined by <m> \mathrm{ad}:= d\mathrm{Ad}</m>.
+            </p>
+        </statement>
+    </definition>
+
+<p>
+    As <m>\Ad</m> is a Lie group homomorphism, the following diagram commutes:
+</p>
+
+    <md>
+    \begin{CD}
+      G @>Ad>> GL(L(G)) \\
+      @A{\exp}AA @AA{\exp}A \\
+      L(G) @>>{ad}> \mathfrak{gl}(L(G))
+    \end{CD}
+  </md>
+
+
+
+<p><alert>What is this map???</alert></p>
+</subsection>
+
+
+<subsection>
+    <title>The naturality of the adjoint representations</title>
+<p>
+    If <m>f:G_1\to G_2</m> is a Lie group homomorphism and <m>g\in G_1</m>, then it is a straight forward calculation to verify that the following diagram commutes:
+</p>
+
+  <md>
+    \begin{CD}
+      G_1 @>f>> G_2 \\
+      @V{i_g}VV @VV{i_{f(g)}}V \\
+      G_1 @>>f> G_2
+    \end{CD}
+  </md>
+
+
+
+
+
+
+<p>
+    Differentiating that above diagram gives the following commutative diagram:
+</p>
+
+  <md>
+    \begin{CD}
+      L(G_1) @>df>> L(G_2) \\
+      @V{Ad_g}VV @VV{Ad_{f(g)}}V \\
+      L(G_1) @>>{df}> L(G_2)
+    \end{CD}
+  </md>
+
+<p>
+    The adjoint is <q>natural</q> in the sense that it interacts well with Lie group homomorphisms.  To be explicit, if <m>Y\in L(G_1)</m>, then following <m>Y</m> around the diagram gives the following equality:
+</p>
+
+<men xml:id="equation-naturality_of_Ad">df(Ad_g(Y)) = Ad_{f(g)}(df(Y)).</men>
+
+
+
+<p>
+    Let <m>X,Y\in L(G_1)</m>, and let <m>g = \exp(tX)</m>.    We revisit <xref ref= "equation-naturality_of_Ad"/> and differentiate with respect to <m>t</m> at <m>t=0</m>.  This gives the following equality:
+</p>
+
+<md>
+    <mrow> df(Ad_{\exp(tX)}(Y))\amp = df(Ad(\exp(tX))(Y)) </mrow>
+    <mrow> \amp = df(\exp(t \ad(X))(Y)) </mrow>
+</md>
+
+<md>
+    <mrow> Ad_{f(\exp(tX))}(df(Y))   \amp = Ad(f(\exp(tX)))(df(Y)) </mrow>
+    <mrow> \amp = Ad((\exp(tdf(X))))(df(Y)) </mrow>
+    <mrow> \amp = (\exp(t\ad (df(X))))(df(Y)) </mrow>
+</md>
+<p> Differentiating both then gives the following equality:
+</p>
+
+<men xml:id="equation-naturality_of_ad">df(ad(X)(Y)) = \ad(df(X))(df(Y)).</men>
+</subsection>
+
+<subsection>
+    <title>The fundamental theorem of the adjoint representation</title>
+    <proposition xml:id="proposition-adjoint_map_is_lie_bracket">
+        <title>The adjoint map is the Lie bracket</title>
+        <statement>
+            <p>
+                If <m>G</m> is a Lie group and <m>X,Y\in L(G)</m>, then <me>ad(X)(Y) = [X,Y].</me>
+
+            </p>
+        </statement>
+        <proof>
+            <title>Hint</title>
+            <p>
+                Break this into two steps.  First show the validity of the result for matrix Lie groups.  Then use the naturality of the adjoint representation to extend the result to all Lie groups.
+            </p>
+        </proof>
+    </proposition>
+
+</subsection>
+</section>

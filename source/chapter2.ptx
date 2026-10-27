@@ -10,4 +10,5 @@
   <xi:include href="chapter2sec3_closed_subgroups.ptx" />
   <xi:include href="chapter2sec4_correspondance.ptx" />
   <xi:include href="chapter2sec5_covers.ptx" />
+  <xi:include href="chapter2sec6_adjoint.ptx" />
 </chapter>
