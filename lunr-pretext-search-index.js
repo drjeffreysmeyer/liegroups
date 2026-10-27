@@ -835,52 +835,241 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "Covers",
-  "body": " Covers  In this section we introduce closed subgroups of Lie groups. As usual, we start with understanding the closed subgroups for matrix groups, extract their properties and then construct and analyze the formal object.   Covering Space   If is a topological space, then a covering space and covering map is a pair where is a continuous surjective map such that every point in has a neighborhood for which is a disjoint union of open sets, each of which is mapped homeomorphically onto by .     Lifting of Maps   If is a topological space, a covering map, is a path-connected, locally path-connected space, and is continuous map, then there exists a lift such that if and only if         Existence of Simply Connected Covering Spaces   If is a path connected, locally path connected, and semilocally simply connected, then there exists a simply connected covering space and a covering map .     Lifting of Lie Algebra Homomorphisms   If is a simply connected Lie group, is a Lie group, and is a Lie algebra homomorphism, then there exists a unique Lie group homomorphism such that .        Covering Space of a Lie Group   If is a connected Lie group, then there exists a simply connected Lie group and a covering map which is also a Lie group homomorphism.    "
+  "body": " Covers     Fundamental Groups of Topological Groups Here we assume some familiarity with algebraic topology and quickly review some of the relevant definitions and results.  Loops   If is a pointed topological space, then a based loop is a map such that .    We may define the concatenation of two based loops by Concatenation defines a group operation on based homotopy classes of loops. The set of based loops up to homotopy forms a group called the fundamental group of .  Now suppose that is a topological group with as the identity element. Then we may also define the pointwise multiplication of two based loops is given by where the product on the right-hand side is the group operation in . Amazingly, concatenation and pointwise multiplication of loops are compatible!   Compatibility of Loop Operations   If are loops based at the identity of a topological group , then .     Concatenation and Pointwise Multiplication are Homotopic   If are loops based at the identity of a topological group , then .     The Fundamental Group of a Topological Group is Abelian   If is a topological group, then its fundamental group is abelian.      Covering Spaces   Covering Space   If is a topological space, then a covering space and covering map is a pair where is a continuous surjective map such that every point in has a neighborhood for which is a disjoint union of open sets, each of which is mapped homeomorphically onto by .     Lifting of Maps   If is a topological space, a covering map, is a path-connected, locally path-connected space, and is continuous map, then there exists a lift such that if and only if         Cover of a Topological Group is a Topological Group   If is a connected topological group, a connected covering space, and for some , then admits a unique topological group structure such that is a group homomorphism and is the identity element.     Cover of a Lie Group is a Lie Group   If is a covering map of topological groups, and is a connected Lie group, then admits a unique Lie group structure such that is a Lie group homomorphism.      Simply Connected Covers   Simply Connected Cover   A simply connected covering space of a topological space is a covering space such that is trivial.     Existence of Simply Connected Covering Spaces   If is a path connected, locally path connected, and semilocally simply connected, then there exists a simply connected covering space and a covering map .    By the lifting property simply connected covering spaces cover all other covers. This is a universal property and hence are simetimes called universal covers . As a consequence, simply connected covering spaces are unique up to homeomorphism.   Lifting of Lie Algebra Homomorphisms   If is a simply connected Lie group, is a Lie group, and is a Lie algebra homomorphism, then there exists a unique Lie group homomorphism such that .        Covering Space of a Lie Group   If is a connected Lie group, then there exists a simply connected Lie group and a covering map which is also a Lie group homomorphism.     Equivalence of Categories   The category of simply connected Lie groups and Lie group homomorphisms is equivalent to the category of finite dimensional real Lie algebras and Lie algebra homomorphisms.     "
+},
+{
+  "id": "definition-loops",
+  "level": "2",
+  "url": "section_covers.html#definition-loops",
+  "type": "Definition",
+  "number": "1.6.1",
+  "title": "Loops.",
+  "body": " Loops   If is a pointed topological space, then a based loop is a map such that .   "
+},
+{
+  "id": "section_covers-3-3",
+  "level": "2",
+  "url": "section_covers.html#section_covers-3-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "concatenation fundamental group "
+},
+{
+  "id": "proposition-compatibility_of_loop_operations",
+  "level": "2",
+  "url": "section_covers.html#proposition-compatibility_of_loop_operations",
+  "type": "Proposition",
+  "number": "1.6.2",
+  "title": "Compatibility of Loop Operations.",
+  "body": " Compatibility of Loop Operations   If are loops based at the identity of a topological group , then .   "
+},
+{
+  "id": "proposition-concatenation_and_pointwise_multiplication_are_homotopic",
+  "level": "2",
+  "url": "section_covers.html#proposition-concatenation_and_pointwise_multiplication_are_homotopic",
+  "type": "Proposition",
+  "number": "1.6.3",
+  "title": "Concatenation and Pointwise Multiplication are Homotopic.",
+  "body": " Concatenation and Pointwise Multiplication are Homotopic   If are loops based at the identity of a topological group , then .   "
+},
+{
+  "id": "proposition-fundamental_group_of_a_topological_group_is_abelian",
+  "level": "2",
+  "url": "section_covers.html#proposition-fundamental_group_of_a_topological_group_is_abelian",
+  "type": "Proposition",
+  "number": "1.6.4",
+  "title": "The Fundamental Group of a Topological Group is Abelian.",
+  "body": " The Fundamental Group of a Topological Group is Abelian   If is a topological group, then its fundamental group is abelian.   "
 },
 {
   "id": "definition-covering_space",
   "level": "2",
   "url": "section_covers.html#definition-covering_space",
   "type": "Definition",
-  "number": "1.6.1",
+  "number": "1.6.5",
   "title": "Covering Space.",
   "body": " Covering Space   If is a topological space, then a covering space and covering map is a pair where is a continuous surjective map such that every point in has a neighborhood for which is a disjoint union of open sets, each of which is mapped homeomorphically onto by .   "
 },
 {
-  "id": "theorem-lifting_of_maps",
+  "id": "blackbox_theorem-lifting_of_maps",
   "level": "2",
-  "url": "section_covers.html#theorem-lifting_of_maps",
+  "url": "section_covers.html#blackbox_theorem-lifting_of_maps",
   "type": "Blackbox Theorem",
-  "number": "1.6.2",
+  "number": "1.6.6",
   "title": "Lifting of Maps.",
   "body": " Lifting of Maps   If is a topological space, a covering map, is a path-connected, locally path-connected space, and is continuous map, then there exists a lift such that if and only if       "
+},
+{
+  "id": "proposition-cover_of_a_topological_group_is_a_topological_group",
+  "level": "2",
+  "url": "section_covers.html#proposition-cover_of_a_topological_group_is_a_topological_group",
+  "type": "Proposition",
+  "number": "1.6.7",
+  "title": "Cover of a Topological Group is a Topological Group.",
+  "body": " Cover of a Topological Group is a Topological Group   If is a connected topological group, a connected covering space, and for some , then admits a unique topological group structure such that is a group homomorphism and is the identity element.   "
+},
+{
+  "id": "proposition-cover_of_a_lie_group_is_a_topological_group",
+  "level": "2",
+  "url": "section_covers.html#proposition-cover_of_a_lie_group_is_a_topological_group",
+  "type": "Proposition",
+  "number": "1.6.8",
+  "title": "Cover of a Lie Group is a Lie Group.",
+  "body": " Cover of a Lie Group is a Lie Group   If is a covering map of topological groups, and is a connected Lie group, then admits a unique Lie group structure such that is a Lie group homomorphism.   "
+},
+{
+  "id": "definition-simply_connected_cover",
+  "level": "2",
+  "url": "section_covers.html#definition-simply_connected_cover",
+  "type": "Definition",
+  "number": "1.6.9",
+  "title": "Simply Connected Cover.",
+  "body": " Simply Connected Cover   A simply connected covering space of a topological space is a covering space such that is trivial.   "
 },
 {
   "id": "theorem-simply_connected_covering_spaces",
   "level": "2",
   "url": "section_covers.html#theorem-simply_connected_covering_spaces",
   "type": "Blackbox Theorem",
-  "number": "1.6.3",
+  "number": "1.6.10",
   "title": "Existence of Simply Connected Covering Spaces.",
   "body": " Existence of Simply Connected Covering Spaces   If is a path connected, locally path connected, and semilocally simply connected, then there exists a simply connected covering space and a covering map .   "
+},
+{
+  "id": "section_covers-5-4",
+  "level": "2",
+  "url": "section_covers.html#section_covers-5-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "universal covers "
 },
 {
   "id": "theorem-lifting_of_lie_algebra_homomorphisms",
   "level": "2",
   "url": "section_covers.html#theorem-lifting_of_lie_algebra_homomorphisms",
   "type": "Proposition",
-  "number": "1.6.4",
+  "number": "1.6.11",
   "title": "Lifting of Lie Algebra Homomorphisms.",
   "body": " Lifting of Lie Algebra Homomorphisms   If is a simply connected Lie group, is a Lie group, and is a Lie algebra homomorphism, then there exists a unique Lie group homomorphism such that .      "
 },
 {
-  "id": "theorem-covering_space_lie_group",
+  "id": "proposition-covering_space_lie_group",
   "level": "2",
-  "url": "section_covers.html#theorem-covering_space_lie_group",
+  "url": "section_covers.html#proposition-covering_space_lie_group",
   "type": "Proposition",
-  "number": "1.6.5",
+  "number": "1.6.12",
   "title": "Covering Space of a Lie Group.",
   "body": " Covering Space of a Lie Group   If is a connected Lie group, then there exists a simply connected Lie group and a covering map which is also a Lie group homomorphism.   "
+},
+{
+  "id": "proposition-equivalence_of_categories",
+  "level": "2",
+  "url": "section_covers.html#proposition-equivalence_of_categories",
+  "type": "Proposition",
+  "number": "1.6.13",
+  "title": "Equivalence of Categories.",
+  "body": " Equivalence of Categories   The category of simply connected Lie groups and Lie group homomorphisms is equivalent to the category of finite dimensional real Lie algebras and Lie algebra homomorphisms.   "
+},
+{
+  "id": "section_adjoint",
+  "level": "1",
+  "url": "section_adjoint.html",
+  "type": "Section",
+  "number": "1.7",
+  "title": "The Adjoint Representation",
+  "body": " The Adjoint Representation  In this section we introduce the adjoint representation of a Lie group and its associated Lie algebra.   The adjoint representations of a Lie group  Pick and consider the map defined by group conjugation . Since all group structure maps are smooth, the map is a diffeomorphism of . If is a quick check shows that is a group homomorphism. The map is called the inner automorphism of associated to .   Inner automorphisms are Lie group homomorphisms   If and is the inner automorphism associated to , then is a Lie group homomorphism.    The differential of this map at the identity element gives an invertible linear map . Consequently, the following diagram commutes:   Upon allowing to vary, we obtain a map called the adjoint representation of .   The adjoint representation of a Lie group   If is a Lie group, then the adjoint representation of is the map defined by .     The adjoint representation of matrix groups   If is a matrix Lie group, then the adjoint representation can be identified with the conjugation action of on its Lie algebra . More precisely, if and , then      The image and kernel of a Lie group homomorphism   If is a Lie group homomorphism, then    The image is a Lie subgroup of with Lie algebra .    The kernel is a closed Lie subgroup of with Lie algebra .       The adjoint group   The adjoint group of a Lie group is the image of the adjoint representation, denoted .    The adjoint group is a Lie subgroup of with Lie algebra .  What is this group? How similar is it to the original group?   The Kernel of the adjoint representation is the center of the group   If is a connected Lie group, then , where is the center of .    So , which means the adjoint group is the original group modulo its center. If the group has a large center (e.g. if it is solvable), then the adjoint group is much smaller than the original group. If the group has a discrete center, then the adjoint group is covered by the original group (e.g. simple semisimple groups).  Differentiating the adjoint representation gives a Lie algebra homomorphism defined by .   The adjoint representation of a Lie algebra   If is a Lie group, then the adjoint representation of is the map defined by .    As is a Lie group homomorphism, the following diagram commutes:   What is this map???    The naturality of the adjoint representations  If is a Lie group homomorphism and , then it is a straight forward calculation to verify that the following diagram commutes:   Differentiating that above diagram gives the following commutative diagram:   The adjoint is natural in the sense that it interacts well with Lie group homomorphisms. To be explicit, if , then following around the diagram gives the following equality:   Let , and let . We revisit and differentiate with respect to at . This gives the following equality:    Differentiating both then gives the following equality:     The fundamental theorem of the adjoint representation   The adjoint map is the Lie bracket   If is a Lie group and , then     Hint  Break this into two steps. First show the validity of the result for matrix Lie groups. Then use the naturality of the adjoint representation to extend the result to all Lie groups.     "
+},
+{
+  "id": "section_adjoint-3-2",
+  "level": "2",
+  "url": "section_adjoint.html#section_adjoint-3-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "inner automorphism "
+},
+{
+  "id": "proposition-inner_automorphisms_are_lie_group_homomorphisms",
+  "level": "2",
+  "url": "section_adjoint.html#proposition-inner_automorphisms_are_lie_group_homomorphisms",
+  "type": "Proposition",
+  "number": "1.7.1",
+  "title": "Inner automorphisms are Lie group homomorphisms.",
+  "body": " Inner automorphisms are Lie group homomorphisms   If and is the inner automorphism associated to , then is a Lie group homomorphism.   "
+},
+{
+  "id": "section_adjoint-3-6",
+  "level": "2",
+  "url": "section_adjoint.html#section_adjoint-3-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "adjoint representation "
+},
+{
+  "id": "definition-adjoint_representation",
+  "level": "2",
+  "url": "section_adjoint.html#definition-adjoint_representation",
+  "type": "Definition",
+  "number": "1.7.2",
+  "title": "The adjoint representation of a Lie group.",
+  "body": " The adjoint representation of a Lie group   If is a Lie group, then the adjoint representation of is the map defined by .   "
+},
+{
+  "id": "proposition-adjoint_representation_of_matrix_groups",
+  "level": "2",
+  "url": "section_adjoint.html#proposition-adjoint_representation_of_matrix_groups",
+  "type": "Proposition",
+  "number": "1.7.3",
+  "title": "The adjoint representation of matrix groups.",
+  "body": " The adjoint representation of matrix groups   If is a matrix Lie group, then the adjoint representation can be identified with the conjugation action of on its Lie algebra . More precisely, if and , then    "
+},
+{
+  "id": "proposition-image_and_kernel_of_map",
+  "level": "2",
+  "url": "section_adjoint.html#proposition-image_and_kernel_of_map",
+  "type": "Proposition",
+  "number": "1.7.4",
+  "title": "The image and kernel of a Lie group homomorphism.",
+  "body": " The image and kernel of a Lie group homomorphism   If is a Lie group homomorphism, then    The image is a Lie subgroup of with Lie algebra .    The kernel is a closed Lie subgroup of with Lie algebra .     "
+},
+{
+  "id": "definition-adjoint_group",
+  "level": "2",
+  "url": "section_adjoint.html#definition-adjoint_group",
+  "type": "Definition",
+  "number": "1.7.5",
+  "title": "The adjoint group.",
+  "body": " The adjoint group   The adjoint group of a Lie group is the image of the adjoint representation, denoted .   "
+},
+{
+  "id": "proposition-kernel_of_adjoint_representation_is_center",
+  "level": "2",
+  "url": "section_adjoint.html#proposition-kernel_of_adjoint_representation_is_center",
+  "type": "Proposition",
+  "number": "1.7.6",
+  "title": "The Kernel of the adjoint representation is the center of the group.",
+  "body": " The Kernel of the adjoint representation is the center of the group   If is a connected Lie group, then , where is the center of .   "
+},
+{
+  "id": "definition-adjoint_representation_ad",
+  "level": "2",
+  "url": "section_adjoint.html#definition-adjoint_representation_ad",
+  "type": "Definition",
+  "number": "1.7.7",
+  "title": "The adjoint representation of a Lie algebra.",
+  "body": " The adjoint representation of a Lie algebra   If is a Lie group, then the adjoint representation of is the map defined by .   "
+},
+{
+  "id": "proposition-adjoint_map_is_lie_bracket",
+  "level": "2",
+  "url": "section_adjoint.html#proposition-adjoint_map_is_lie_bracket",
+  "type": "Proposition",
+  "number": "1.7.8",
+  "title": "The adjoint map is the Lie bracket.",
+  "body": " The adjoint map is the Lie bracket   If is a Lie group and , then     Hint  Break this into two steps. First show the validity of the result for matrix Lie groups. Then use the naturality of the adjoint representation to extend the result to all Lie groups.   "
 },
 {
   "id": "backmatter-2",
